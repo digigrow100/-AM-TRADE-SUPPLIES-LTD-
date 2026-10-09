@@ -19,6 +19,7 @@ Next.js (App Router, TypeScript, Tailwind CSS v4) site. Read the relevant guide 
 | Site config                | `next.config.ts`                                                   |
 | Optimized images           | `src/assets/images/` (registered in `src/lib/images.ts`)       |
 | Icon font subset           | `src/assets/fonts/material-symbols.woff2`                          |
+| Favicon / app icons       | `src/app/icon.png`, `src/app/apple-icon.png`                    |
 | Static / public files      | `public/`                                                          |
 
 Header and Footer are rendered once in `src/app/layout.tsx` — never add them to individual pages.
@@ -29,7 +30,7 @@ Header and Footer are rendered once in `src/app/layout.tsx` — never add them t
 - Import them and render with Next.js `<Image />` for automatic optimization.
 - `.webp` preferred.
 - Always provide `alt`, `width` and `height` (or `fill` + `sizes` inside a sized, relative container).
-- All content photos live in `src/assets/images/` and are registered in `src/lib/images.ts`. Only the logo is still a remote placeholder.
+- All content photos and the logo live in `src/assets/images/` and are registered in `src/lib/images.ts`.
 
 ## Icons
 

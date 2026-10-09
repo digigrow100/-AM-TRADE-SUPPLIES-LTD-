@@ -15,17 +15,12 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-margin-mobile sm:px-margin">
         <div className="grid grid-cols-1 gap-space-xl pb-space-xl md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-space-md">
-            <div className="flex items-center gap-space-sm">
+            <div className="inline-block rounded-lg bg-surface-card px-space-md py-space-sm">
               <Image
                 src={images.logo}
                 alt={`${site.name} Logo`}
-                width={120}
-                height={32}
-                className="h-8 w-auto object-contain brightness-0 invert"
+                className="h-10 w-auto object-contain"
               />
-              <span className="text-headline-sm tracking-tight text-on-primary">
-                {site.shortName}
-              </span>
             </div>
             <p className="text-body-sm text-surface-container-highest">
               Industrial wholesale solutions &amp; high-volume commodity trade

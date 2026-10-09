@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   },
   description:
     "UK B2B wholesale supplier of drinks, commercial cooking oils and bakery flour. Pallet supply, trade pricing and credit terms from Stoke-on-Trent.",
-  icons: { icon: "/favicon.svg" },
 };
 
 export const viewport: Viewport = {

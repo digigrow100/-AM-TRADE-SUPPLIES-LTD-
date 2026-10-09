@@ -50,14 +50,9 @@ export default function Header() {
           <Image
             src={images.logo}
             alt={`${site.name} Logo`}
-            width={120}
-            height={32}
             priority
-            className="h-8 w-auto object-contain"
+            className="h-10 w-auto object-contain md:h-12"
           />
-          <span className="hidden text-headline-sm tracking-tight text-on-surface lg:inline-block">
-            {site.name}
-          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-space-sm xl:flex">
