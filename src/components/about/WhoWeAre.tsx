@@ -5,7 +5,7 @@ const customers = [
   {
     icon: "storefront",
     title: "Retailers and Shops",
-    body: "Convenience stores, delis and independent shops need drinks that sell and staples customers ask for. We supply soft drinks, bottled water and juices in wholesale quantities.",
+    body: "Convenience stores, delis and independent shops need drinks that sell and everyday products customers ask for. We supply soft drinks, bottled water and juices in wholesale quantities.",
     link: { label: "See the drinks range", href: "/services#drinks" },
   },
   {
