@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import { images } from "@/lib/images";
 
 type Category = {
   id: string;
-  image: string;
+  image: StaticImageData;
   alt: string;
   overlay: React.ReactNode;
   ref: string;

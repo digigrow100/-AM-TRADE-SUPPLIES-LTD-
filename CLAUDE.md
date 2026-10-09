@@ -17,7 +17,7 @@ Next.js (App Router, TypeScript, Tailwind CSS v4) site. Read the relevant guide 
 | Global CSS / design tokens | `src/app/globals.css`                                              |
 | Nav links, phone, address  | `src/lib/site.ts`                                                  |
 | Site config                | `next.config.ts`                                                   |
-| Optimized images           | `src/assets/images/` (placeholder URLs: `src/lib/images.ts`)       |
+| Optimized images           | `src/assets/images/` (registered in `src/lib/images.ts`)       |
 | Icon font subset           | `src/assets/fonts/material-symbols.woff2`                          |
 | Static / public files      | `public/`                                                          |
 
@@ -29,7 +29,7 @@ Header and Footer are rendered once in `src/app/layout.tsx` — never add them t
 - Import them and render with Next.js `<Image />` for automatic optimization.
 - `.webp` preferred.
 - Always provide `alt`, `width` and `height` (or `fill` + `sizes` inside a sized, relative container).
-- The pages currently use remote placeholder photos listed in `src/lib/images.ts`; replace each with a file in `src/assets/images/` when real photos are supplied.
+- All content photos live in `src/assets/images/` and are registered in `src/lib/images.ts`. Only the logo is still a remote placeholder.
 
 ## Icons
 
