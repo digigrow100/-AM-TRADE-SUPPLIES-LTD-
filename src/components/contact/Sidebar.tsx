@@ -84,7 +84,7 @@ export default function Sidebar() {
         </ul>
         <div className="pt-space-xs">
           <Link
-            href="/products-services"
+            href="/services"
             className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-surface-card/10 px-space-md py-2.5 text-label-lg text-on-primary transition-colors hover:bg-surface-card/20"
           >
             <Icon name="inventory_2" className="text-[18px]" />

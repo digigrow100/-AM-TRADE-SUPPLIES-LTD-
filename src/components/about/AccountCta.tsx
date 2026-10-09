@@ -25,7 +25,7 @@ export default function AccountCta() {
             <p className="max-w-xl text-body-lg text-surface-container-highest">
               Tell us what your business needs and we will come back with a
               quote. You can also read about our{" "}
-              <Link href="/products-services" className="font-semibold text-on-primary underline-offset-2 hover:underline">
+              <Link href="/services" className="font-semibold text-on-primary underline-offset-2 hover:underline">
                 wholesale product range
               </Link>{" "}
               before you get in touch.
@@ -38,7 +38,7 @@ export default function AccountCta() {
                 Request a Trade Quote <Icon name="arrow_forward" className="text-[18px]" />
               </Link>
               <Link
-                href="/products-services"
+                href="/services"
                 className="flex items-center justify-center gap-space-xs rounded-lg bg-surface-card/10 px-space-lg py-3 text-label-lg text-on-primary transition-colors hover:bg-surface-card/20"
               >
                 View Products

@@ -54,7 +54,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-space-sm xl:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-space-sm lg:flex">
           {navLinks.map((link) => {
             const active = isActive(pathname, link.href);
             return (
@@ -83,7 +83,7 @@ export default function Header() {
           </Link>
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-on-surface hover:bg-surface-container xl:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-on-surface hover:bg-surface-container lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -98,7 +98,7 @@ export default function Header() {
         <nav
           id="mobile-menu"
           aria-label="Mobile"
-          className="max-h-[calc(100dvh-7rem)] overflow-y-auto border-t border-border-crisp bg-surface-card xl:hidden"
+          className="max-h-[calc(100dvh-7rem)] overflow-y-auto border-t border-border-crisp bg-surface-card lg:hidden"
         >
           <div className="mx-auto flex max-w-7xl flex-col gap-space-xs px-margin-mobile py-space-md sm:px-margin">
             {navLinks.map((link) => {

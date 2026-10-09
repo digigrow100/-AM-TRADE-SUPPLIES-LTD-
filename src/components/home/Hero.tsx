@@ -31,7 +31,7 @@ export default function Hero() {
         </p>
         <div className="mt-space-xl flex w-full flex-col items-stretch justify-center gap-space-md sm:w-auto sm:flex-row sm:items-center">
           <Link
-            href="/products-services"
+            href="/services"
             className="flex items-center justify-center gap-space-xs rounded-lg bg-secondary-container px-space-xl py-3 text-label-lg text-on-secondary shadow-md transition-all hover:-translate-y-0.5 hover:bg-trade-orange-hover"
           >
             View Our Products

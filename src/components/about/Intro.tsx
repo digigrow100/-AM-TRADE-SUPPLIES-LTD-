@@ -22,8 +22,8 @@ export default function Intro() {
           <p className="text-body-md text-on-surface-variant">
             Our approach is simple. We keep the range focused, quote clearly and
             deal with each business directly. See what we stock on our{" "}
-            <Link href="/products-services" className="font-semibold text-secondary underline-offset-2 hover:underline">
-              products and services page
+            <Link href="/services" className="font-semibold text-secondary underline-offset-2 hover:underline">
+              services page
             </Link>
             .
           </p>

@@ -8,7 +8,7 @@ const categories = [
     title: "Wholesale Drinks",
     image: images.homeDrinks,
     alt: "Refrigerated display of bottled drinks and juices",
-    href: "/products-services#drinks",
+    href: "/services#drinks",
     cta: "See the drinks range",
     body: "Soft drinks, bottled water and juices for shops, cafés, takeaways and caterers.",
   },
@@ -16,7 +16,7 @@ const categories = [
     title: "Wholesale Cooking Oils",
     image: images.homeOils,
     alt: "Green cooking oil containers and cartons on a commercial kitchen bench",
-    href: "/products-services#oils",
+    href: "/services#oils",
     cta: "See the cooking oils range",
     body: "Rapeseed oil and vegetable oil for restaurants, takeaways, cafés and commercial kitchens.",
   },
@@ -24,7 +24,7 @@ const categories = [
     title: "Wholesale Flour",
     image: images.homeFlour,
     alt: "Stack of paper flour sacks on a wooden pallet in a warehouse",
-    href: "/products-services#flour",
+    href: "/services#flour",
     cta: "See the flour range",
     body: "Plain flour, pizza flour and self-raising flour for bakeries, pizzerias and catering kitchens.",
   },
@@ -46,7 +46,7 @@ export default function Categories() {
           </p>
         </div>
         <Link
-          href="/products-services"
+          href="/services"
           className="group inline-flex items-center gap-space-xs self-start text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover sm:self-auto"
         >
           <span>View All Products</span>

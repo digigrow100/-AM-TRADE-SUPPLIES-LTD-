@@ -20,7 +20,7 @@ export default function Overview() {
         </p>
         <p className="mt-space-sm text-body-md leading-relaxed text-on-surface-variant">
           Browse our{" "}
-          <Link href="/products-services" className="font-semibold text-secondary underline-offset-2 hover:underline">
+          <Link href="/services" className="font-semibold text-secondary underline-offset-2 hover:underline">
             wholesale product range
           </Link>{" "}
           or read{" "}

@@ -14,7 +14,7 @@ export default function BottomCta() {
       </div>
       <div className="flex w-full shrink-0 flex-col gap-space-sm sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
         <Link
-          href="/products-services"
+          href="/services"
           className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-space-md py-3 text-label-lg text-on-primary transition-colors hover:bg-navy-deep"
         >
           <Icon name="inventory_2" className="text-[18px]" />

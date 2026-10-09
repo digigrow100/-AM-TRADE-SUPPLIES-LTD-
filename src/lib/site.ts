@@ -28,14 +28,13 @@ export const phoneHref = site.phone
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Products & Services", href: "/products-services" },
-  { label: "Why Trade With Us", href: "/#why-trade-with-us" },
+  { label: "Services", href: "/services" },
   { label: "Contact Us", href: "/contact" },
 ] as const;
 
 export const footerPageLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Products & Services", href: "/products-services" },
+  { label: "Services", href: "/services" },
   { label: "Contact Us", href: "/contact" },
 ] as const;

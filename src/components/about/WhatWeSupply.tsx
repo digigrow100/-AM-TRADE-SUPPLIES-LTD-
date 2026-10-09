@@ -11,7 +11,7 @@ const items = [
     body: "Everyday drinks for shelves, fridges and service counters, supplied in wholesale quantities.",
     points: ["Soft drinks", "Bottled water", "Juices"],
     cta: "Explore drinks",
-    href: "/products-services#drinks",
+    href: "/services#drinks",
   },
   {
     title: "Wholesale Cooking Oils",
@@ -20,7 +20,7 @@ const items = [
     body: "Cooking oils for frying, roasting and baking in busy commercial kitchens and takeaways.",
     points: ["Rapeseed oil", "Vegetable oil"],
     cta: "Explore cooking oils",
-    href: "/products-services#oils",
+    href: "/services#oils",
   },
   {
     title: "Wholesale Flour",
@@ -29,7 +29,7 @@ const items = [
     body: "Flour for bakeries, pizzerias and caterers who need dependable ingredients for daily production.",
     points: ["Plain flour", "Pizza flour", "Self-raising flour"],
     cta: "Explore flour",
-    href: "/products-services#flour",
+    href: "/services#flour",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function WhatWeSupply() {
           </p>
         </div>
         <Link
-          href="/products-services"
+          href="/services"
           className="flex items-center gap-space-xs whitespace-nowrap text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover"
         >
           View the full product range <Icon name="arrow_forward" className="text-[18px]" />

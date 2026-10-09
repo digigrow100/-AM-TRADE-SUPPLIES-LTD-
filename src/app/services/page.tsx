@@ -17,7 +17,7 @@ const description =
 export const metadata: Metadata = pageMetadata({
   title,
   description,
-  path: "/products-services",
+  path: "/services",
 });
 
 const faqs: FaqItem[] = [
@@ -48,20 +48,20 @@ const faqs: FaqItem[] = [
   },
 ];
 
-export default function ProductsServicesPage() {
+export default function ServicesPage() {
   return (
     <Container className="pt-space-md md:pt-space-lg">
       <JsonLd
         data={webPageLd(
           "CollectionPage",
-          { name: title, description, path: "/products-services" },
+          { name: title, description, path: "/services" },
           { mainEntity: itemListLd([...allProductLines]) },
         )}
       />
       <JsonLd
         data={breadcrumbLd([
           { name: "Home", path: "/" },
-          { name: "Products & Services", path: "/products-services" },
+          { name: "Services", path: "/services" },
         ])}
       />
       <CatalogueHero />

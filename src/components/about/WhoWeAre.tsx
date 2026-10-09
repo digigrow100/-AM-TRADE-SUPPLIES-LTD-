@@ -6,19 +6,19 @@ const customers = [
     icon: "storefront",
     title: "Retailers and Shops",
     body: "Convenience stores, delis and independent shops need drinks that sell and staples customers ask for. We supply soft drinks, bottled water and juices in wholesale quantities.",
-    link: { label: "See the drinks range", href: "/products-services#drinks" },
+    link: { label: "See the drinks range", href: "/services#drinks" },
   },
   {
     icon: "inventory_2",
     title: "Restaurants, Takeaways and Cafés",
     body: "Busy kitchens go through cooking oil, flour and drinks every week. We can supply rapeseed oil, vegetable oil, flour and drinks from one place.",
-    link: { label: "See the cooking oils range", href: "/products-services#oils" },
+    link: { label: "See the cooking oils range", href: "/services#oils" },
   },
   {
     icon: "support_agent",
     title: "Bakeries and Caterers",
     body: "Bakers and caterers rely on the right flour and oil for consistent results. We supply plain, pizza and self-raising flour, alongside oils and drinks.",
-    link: { label: "See the flour range", href: "/products-services#flour" },
+    link: { label: "See the flour range", href: "/services#flour" },
   },
 ];
 

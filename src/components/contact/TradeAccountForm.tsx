@@ -42,7 +42,7 @@ export default function TradeAccountForm() {
           <p className="mt-1 text-body-sm text-on-surface-variant">
             Complete the form with your business details and the products you
             need. Want to browse first? See our{" "}
-            <Link href="/products-services" className="font-semibold text-secondary underline-offset-2 hover:underline">
+            <Link href="/services" className="font-semibold text-secondary underline-offset-2 hover:underline">
               wholesale products
             </Link>
             .

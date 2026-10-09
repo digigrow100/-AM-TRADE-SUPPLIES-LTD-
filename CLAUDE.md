@@ -12,7 +12,7 @@ The business is **AM Trade Supplies Ltd** (B2B wholesale food and drink supplier
 | -------------------------- | ------------------------------------------------------------------ |
 | Home page                  | `src/app/page.tsx` (sections in `src/components/home/`)            |
 | About page                 | `src/app/about/page.tsx` (`src/components/about/`)                 |
-| Products & Services page   | `src/app/products-services/page.tsx` (`src/components/services/`) |
+| Services page              | `src/app/services/page.tsx` (`src/components/services/`) |
 | Contact / trade account    | `src/app/contact/page.tsx` (`src/components/contact/`)             |
 | Other pages                | `src/app/<route>/page.tsx`                                         |
 | Header (global)            | `src/components/Header.tsx`                                        |

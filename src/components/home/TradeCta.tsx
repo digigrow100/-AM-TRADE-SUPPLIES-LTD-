@@ -31,7 +31,7 @@ export default function TradeCta() {
           </p>
           <p className="mt-space-sm max-w-xl text-body-md text-surface-container-highest">
             Want to see what is available first? Have a look at our{" "}
-            <Link href="/products-services" className="font-semibold text-on-primary underline-offset-2 hover:underline">
+            <Link href="/services" className="font-semibold text-on-primary underline-offset-2 hover:underline">
               drinks, oils and flour
             </Link>{" "}
             or use the{" "}
