@@ -1,14 +1,29 @@
+function resolveSiteUrl() {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.replace(/\/$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  if (vercel) return `https://${vercel}`;
+  return "http://localhost:3000";
+}
+
+export const siteUrl = resolveSiteUrl();
+
 export const site = {
-  name: "MB Trade Supplies Ltd",
-  shortName: "MB Trade Supplies",
-  address: "Unit 3, Garfield Works, Uttoxeter Road, ST3 1PF",
-  phone: "01782 123 456",
-  phoneHref: "tel:01782123456",
-  email: "sales@mbtradesupplies.com",
-  hours: "Mon - Fri: 8:00 AM - 5:30 PM",
-  companyReg: "14298102",
-  vat: "GB 412 8931 04",
-} as const;
+  name: "AM Trade Supplies Ltd",
+  shortName: "AM Trade Supplies",
+  locality: "Stoke-on-Trent",
+  country: "GB",
+  description:
+    "AM Trade Supplies Ltd is a B2B wholesale food and drink supplier in Stoke-on-Trent, supplying soft drinks, bottled water, juices, cooking oils and flour to trade customers.",
+  // Not yet confirmed. Set these when supplied and they appear automatically
+  // in the header, footer, contact page and structured data.
+  phone: undefined as string | undefined,
+  email: undefined as string | undefined,
+};
+
+export const phoneHref = site.phone
+  ? `tel:${site.phone.replace(/\s+/g, "")}`
+  : undefined;
 
 export const navLinks = [
   { label: "Home", href: "/" },
@@ -18,18 +33,9 @@ export const navLinks = [
   { label: "Contact Us", href: "/contact" },
 ] as const;
 
-export const footerQuickLinks = [
-  { label: "Services", href: "/products-services" },
-  { label: "Wholesale Drinks", href: "/products-services#drinks" },
-  { label: "Wholesale Cooking Oils", href: "/products-services#oils" },
-  { label: "Wholesale Flour", href: "/products-services#flour" },
+export const footerPageLinks = [
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
+  { label: "Products & Services", href: "/products-services" },
   { label: "Contact Us", href: "/contact" },
-] as const;
-
-export const footerComplianceLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Shipping Info", href: "#" },
-  { label: "Wholesale Portal", href: "/contact" },
 ] as const;

@@ -1,32 +1,24 @@
+import Link from "next/link";
 import Icon from "@/components/Icon";
 
 const cards = [
   {
-    icon: "local_shipping",
-    title: "Free Mainland Delivery",
-    body: (
-      <>
-        All orders exceeding <strong>£500 + VAT</strong> qualify for complimentary
-        delivery across mainland England, Wales, and lowland Scotland. Low order
-        fee applies beneath threshold.
-      </>
-    ),
-    badgeIcon: "verified",
-    badge: "24-48h Delivery Window",
-  },
-  {
-    icon: "forklift",
-    title: "Tail-Lift & Forklift Protocol",
-    body: "Specify curbside offloading requirements during booking. We dispatch tail-lift vehicles with manual pump trucks for premises without commercial loading docks or forklifts.",
-    badgeIcon: "check_circle",
-    badge: "Flexible Drop Options",
+    icon: "send",
+    title: "1. Tell Us What You Need",
+    body: "Send your product list, rough quantities and delivery postcode through the quote form below or our contact page.",
+    badge: "Include your postcode",
   },
   {
     icon: "receipt_long",
-    title: "30-Day B2B Credit Terms",
-    body: "Approved businesses enjoy end-of-month trade accounts, consolidated electronic VAT invoicing, and prioritized standing orders with allocated warehouse reserves.",
-    badgeIcon: "credit_score",
-    badge: "Instant Credit Verification",
+    title: "2. Receive Your Quote",
+    body: "We review your request and prepare a quote based on the products and quantities you have asked for.",
+    badge: "Prices on request",
+  },
+  {
+    icon: "local_shipping",
+    title: "3. Arrange Your Supply",
+    body: "Once you are happy with the quote, we agree the details of your order and delivery with you directly.",
+    badge: "Delivery confirmed with you",
   },
 ];
 
@@ -35,12 +27,18 @@ export default function Fulfilment() {
     <section className="mt-space-xl rounded-xl bg-surface-card p-space-md py-space-lg shadow-sm sm:p-space-lg md:mt-space-2xl md:p-space-xl">
       <div className="mb-space-lg max-w-3xl">
         <span className="text-label-md font-bold uppercase tracking-wider text-secondary">
-          Reliable UK Logistics Infrastructure
+          How It Works
         </span>
-        <h2 className="mt-1 text-headline-lg-mobile md:text-headline-lg text-on-surface">Ordering &amp; Fulfilment Framework</h2>
+        <h2 className="mt-1 text-headline-lg-mobile text-on-surface md:text-headline-lg">
+          How Wholesale Ordering Works
+        </h2>
         <p className="mt-space-xs text-body-md text-on-surface-variant">
-          We run dedicated contract carriers alongside national freight pallet
-          networks to ensure predictable drops with transparent delivery terms.
+          Ordering from AM Trade Supplies Ltd takes three simple steps. If you
+          have questions first, visit our{" "}
+          <Link href="/contact" className="font-semibold text-secondary underline-offset-2 hover:underline">
+            contact page
+          </Link>
+          .
         </p>
       </div>
       <div className="grid grid-cols-1 gap-space-lg md:grid-cols-3">
@@ -54,7 +52,7 @@ export default function Fulfilment() {
               <p className="text-body-sm text-on-surface-variant">{c.body}</p>
             </div>
             <div className="mt-space-md flex items-center gap-1 rounded bg-surface-card p-space-xs text-label-md text-on-surface">
-              <Icon name={c.badgeIcon} className="text-[18px] text-stock-green" /> {c.badge}
+              <Icon name="check_circle" className="text-[18px] text-stock-green" /> {c.badge}
             </div>
           </div>
         ))}

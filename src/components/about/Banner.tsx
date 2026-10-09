@@ -16,22 +16,22 @@ export default function Banner() {
           <Icon name="chevron_right" className="text-[14px]" />
           <span className="text-secondary-fixed">About Us</span>
         </nav>
-        <h1 className="text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-primary">
-          About MB Trade Supplies Ltd
+        <h1 className="text-headline-lg-mobile tracking-tight text-on-primary md:text-headline-lg">
+          About AM Trade Supplies Ltd: B2B Wholesale Supplier in Stoke-on-Trent
         </h1>
         <p className="max-w-2xl text-body-lg leading-relaxed text-surface-container-highest">
-          Your dependable UK wholesale partner powering restaurants, bakeries,
-          caterers, and commercial food &amp; beverage operations with
-          high-volume consistency.
+          AM Trade Supplies Ltd is a B2B wholesale supplier in Stoke-on-Trent,
+          providing food and drink products to retailers, restaurants,
+          takeaways, cafés, bakeries and caterers.
         </p>
         <div className="flex flex-col gap-space-sm pt-space-xs text-body-sm text-surface-container-high sm:flex-row sm:flex-wrap sm:items-center sm:gap-space-md">
           <div className="flex items-center gap-space-xs">
             <Icon name="location_on" className="text-[18px] text-secondary-container" />
-            <span>Garfield Works, Uttoxeter Road, ST3 1PF</span>
+            <span>Stoke-on-Trent, UK</span>
           </div>
           <div className="flex items-center gap-space-xs">
-            <Icon name="verified" className="text-[18px] text-stock-green" />
-            <span>FSA Registered • B2B Account Logistics</span>
+            <Icon name="storefront" className="text-[18px] text-secondary-container" />
+            <span>Wholesale food and drink for trade customers</span>
           </div>
         </div>
       </div>

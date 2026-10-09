@@ -1,8 +1,8 @@
 const metrics = [
-  { value: "500+", title: "Stocked SKUs", body: "Pallet-ready commodity lines" },
-  { value: "24h", title: "Dispatch SLA", body: "UK Mainland nationwide freight" },
-  { value: "£500", title: "Free Delivery", body: "Full pallet consignment baseline" },
-  { value: "1.2k+", title: "Trade Accounts", body: "Supplying kitchens & wholesale" },
+  { value: "3", title: "Categories", body: "Drinks, cooking oils and flour" },
+  { value: "8", title: "Product Lines", body: "Listed in full below" },
+  { value: "B2B", title: "Trade Supply", body: "For businesses buying in volume" },
+  { value: "Quote", title: "Prices on Request", body: "Based on your order" },
 ];
 
 export default function MetricStrip() {

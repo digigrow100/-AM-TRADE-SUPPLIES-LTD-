@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Icon from "@/components/Icon";
+import { allProductLines } from "@/lib/products";
 
 const input =
   "w-full rounded-lg bg-surface-subtle px-space-md py-2.5 text-body-sm text-on-surface shadow-sm outline-none transition-all placeholder:text-outline focus:bg-surface-card focus:ring-2 focus:ring-secondary-container";
@@ -12,26 +14,12 @@ const option =
   "flex cursor-pointer items-center gap-2 rounded-lg bg-surface-subtle p-2.5 text-body-sm text-on-surface transition-colors hover:bg-surface-container";
 
 const sectors = [
+  ["retailer", "Retailer / Shop"],
   ["restaurant", "Restaurant / Takeaway"],
+  ["cafe", "Café"],
   ["bakery", "Bakery / Pizzeria"],
-  ["wholesaler", "Wholesaler / Retail"],
-  ["catering", "Contract Catering"],
-  ["events", "Events / Stadiums"],
-  ["other", "Other Commercial"],
-];
-
-const access = [
-  "Tail-lift vehicle strictly required",
-  "Forklift & loading bay available on-site",
-  "Articulated lorry (40ft) access permitted",
-  "Restricted delivery time window (e.g. 6AM-10AM)",
-];
-
-const categories = [
-  { label: "Wholesale Drinks", checked: true },
-  { label: "Cooking Oils", checked: true },
-  { label: "Bakery Flour", checked: false },
-  { label: "Packaging & Disposables", checked: false },
+  ["caterer", "Caterer"],
+  ["other", "Other Business"],
 ];
 
 function SectionTitle({ icon, children }: { icon: string; children: React.ReactNode }) {
@@ -50,15 +38,14 @@ export default function TradeAccountForm() {
     <>
       <div className="rounded-2xl bg-surface-card p-space-md shadow-sm sm:p-space-lg md:p-space-xl">
         <div className="mb-space-lg">
-          <div className="flex flex-wrap items-center justify-between gap-space-xs">
-            <h2 className="text-headline-md text-on-surface">Wholesale Trade Application</h2>
-            <span className="rounded-full bg-surface-container px-2.5 py-1 text-label-md text-on-primary-fixed-variant">
-              Step 1 of 1
-            </span>
-          </div>
+          <h2 className="text-headline-md text-on-surface">Send Us a Trade Enquiry</h2>
           <p className="mt-1 text-body-sm text-on-surface-variant">
-            Complete the form below to initiate your trade terms. For urgent
-            immediate pallet dispatches, call our trade desk at 01782 123 456.
+            Complete the form with your business details and the products you
+            need. Want to browse first? See our{" "}
+            <Link href="/products-services" className="font-semibold text-secondary underline-offset-2 hover:underline">
+              wholesale products
+            </Link>
+            .
           </p>
         </div>
 
@@ -70,29 +57,19 @@ export default function TradeAccountForm() {
           }}
         >
           <div className="space-y-space-md">
-            <SectionTitle icon="storefront">1. Commercial Business Details</SectionTitle>
+            <SectionTitle icon="storefront">1. Your Business</SectionTitle>
             <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
               <div>
-                <label htmlFor="ta-company" className={label}>Company Registered Name *</label>
-                <input id="ta-company" required type="text" placeholder="e.g. Stoke Hospitality Group Ltd" className={input} />
+                <label htmlFor="ta-company" className={label}>Business Name *</label>
+                <input id="ta-company" required type="text" placeholder="Your registered or trading name" className={input} />
               </div>
               <div>
-                <label htmlFor="ta-trading" className={label}>Trading Name (if different)</label>
-                <input id="ta-trading" type="text" placeholder="e.g. Garfield Road Deli & Bar" className={input} />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
-              <div>
-                <label htmlFor="ta-reg" className={label}>Company Registration Number</label>
-                <input id="ta-reg" type="text" placeholder="e.g. 14298102" className={input} />
-              </div>
-              <div>
-                <label htmlFor="ta-vat" className={label}>VAT Number (if registered)</label>
-                <input id="ta-vat" type="text" placeholder="GB 412 8931 04" className={input} />
+                <label htmlFor="ta-reg" className={label}>Company or VAT Number (optional)</label>
+                <input id="ta-reg" type="text" placeholder="If you have one to hand" className={input} />
               </div>
             </div>
             <fieldset>
-              <legend className={label}>Primary Trade Sector *</legend>
+              <legend className={label}>Type of Business *</legend>
               <div className="grid grid-cols-1 gap-space-xs min-[400px]:grid-cols-2 sm:grid-cols-3">
                 {sectors.map(([value, text], i) => (
                   <label key={value} className={option}>
@@ -111,92 +88,81 @@ export default function TradeAccountForm() {
           </div>
 
           <div className="space-y-space-md rounded-xl bg-surface-subtle/50 p-space-md">
-            <SectionTitle icon="badge">2. Key Procurement Contact</SectionTitle>
+            <SectionTitle icon="badge">2. Your Contact Details</SectionTitle>
             <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
               <div>
                 <label htmlFor="ta-name" className={label}>Full Name *</label>
-                <input id="ta-name" required type="text" placeholder="John Miller" className={inputCard} />
+                <input id="ta-name" required type="text" placeholder="Your name" className={inputCard} />
               </div>
               <div>
-                <label htmlFor="ta-job" className={label}>Position / Job Title *</label>
-                <input id="ta-job" required type="text" placeholder="Head of Purchasing / General Manager" className={inputCard} />
+                <label htmlFor="ta-job" className={label}>Job Title</label>
+                <input id="ta-job" type="text" placeholder="e.g. Owner, Manager, Buyer" className={inputCard} />
               </div>
             </div>
             <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
               <div>
-                <label htmlFor="ta-email" className={label}>Direct Business Email *</label>
-                <input id="ta-email" required type="email" placeholder="purchasing@company.co.uk" className={inputCard} />
+                <label htmlFor="ta-email" className={label}>Email Address *</label>
+                <input id="ta-email" required type="email" placeholder="name@business.co.uk" className={inputCard} />
               </div>
               <div>
-                <label htmlFor="ta-tel" className={label}>Direct Telephone / Mobile *</label>
-                <input id="ta-tel" required type="tel" placeholder="07123 456 789 or 01782..." className={inputCard} />
+                <label htmlFor="ta-tel" className={label}>Phone Number *</label>
+                <input id="ta-tel" required type="tel" placeholder="07..." className={inputCard} />
               </div>
             </div>
           </div>
 
           <div className="space-y-space-md">
-            <SectionTitle icon="local_shipping">3. Delivery Logistics &amp; Site Access</SectionTitle>
+            <SectionTitle icon="local_shipping">3. Delivery Location</SectionTitle>
             <div className="grid grid-cols-1 gap-space-md md:grid-cols-3">
               <div className="md:col-span-2">
-                <label htmlFor="ta-street" className={label}>Delivery Street Address *</label>
-                <input id="ta-street" required type="text" placeholder="Building 4, Commercial Way, Industrial Estate" className={input} />
+                <label htmlFor="ta-street" className={label}>Delivery Address *</label>
+                <input id="ta-street" required type="text" placeholder="Street address and town" className={input} />
               </div>
               <div>
                 <label htmlFor="ta-post" className={label}>Postcode *</label>
-                <input id="ta-post" required type="text" placeholder="e.g. ST3 1PF" className={input} />
-              </div>
-            </div>
-            <fieldset>
-              <legend className={`${label} mb-1.5`}>Site Access &amp; Offloading Setup</legend>
-              <div className="grid grid-cols-1 gap-space-sm sm:grid-cols-2">
-                {access.map((a) => (
-                  <label key={a} className={option}>
-                    <input type="checkbox" className="accent-secondary-container" />
-                    <span>{a}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-          </div>
-
-          <div className="space-y-space-md rounded-xl bg-surface-subtle/50 p-space-md">
-            <SectionTitle icon="inventory_2">4. Product Lines &amp; Estimated Volume</SectionTitle>
-            <fieldset>
-              <legend className={`${label} mb-1.5`}>Product Categories of Primary Interest</legend>
-              <div className="grid grid-cols-1 gap-space-xs text-body-sm min-[400px]:grid-cols-2 sm:grid-cols-4">
-                {categories.map((c) => (
-                  <label key={c.label} className="flex cursor-pointer items-center gap-2 rounded-lg bg-surface-card p-2.5 hover:bg-surface-container">
-                    <input type="checkbox" defaultChecked={c.checked} className="accent-secondary-container" />
-                    <span>{c.label}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-            <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
-              <div>
-                <label htmlFor="ta-spend" className={label}>Expected Monthly Spend</label>
-                <select id="ta-spend" defaultValue="mid" className={inputCard}>
-                  <option value="low">Under £1,000 / month</option>
-                  <option value="mid">£1,000 – £5,000 / month</option>
-                  <option value="high">£5,000 – £15,000 / month (Volume Tier)</option>
-                  <option value="ent">£15,000+ / month (Enterprise Contract)</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="ta-credit" className={label}>Preferred Credit Facility</label>
-                <select id="ta-credit" className={inputCard}>
-                  <option>Pro-forma / Card on Dispatch (Standard)</option>
-                  <option>30-Day Trade Credit Account (Subject to verification)</option>
-                  <option>Direct Debit Monthly Settlement</option>
-                </select>
+                <input id="ta-post" required type="text" placeholder="e.g. ST1 1AA" className={input} />
               </div>
             </div>
             <div>
-              <label htmlFor="ta-notes" className={label}>Special Order Notes or Stock Inquiries</label>
+              <label htmlFor="ta-access" className={label}>Delivery or Access Notes</label>
+              <textarea
+                id="ta-access"
+                rows={2}
+                placeholder="Anything we should know about delivering to your premises."
+                className={input}
+              />
+            </div>
+          </div>
+
+          <div className="space-y-space-md rounded-xl bg-surface-subtle/50 p-space-md">
+            <SectionTitle icon="inventory_2">4. Products You Need</SectionTitle>
+            <fieldset>
+              <legend className={`${label} mb-1.5`}>Products of Interest</legend>
+              <div className="grid grid-cols-1 gap-space-xs text-body-sm min-[400px]:grid-cols-2 sm:grid-cols-3">
+                {allProductLines.map((line) => (
+                  <label key={line} className="flex cursor-pointer items-center gap-2 rounded-lg bg-surface-card p-2.5 hover:bg-surface-container">
+                    <input type="checkbox" name="products" value={line} className="accent-secondary-container" />
+                    <span>{line}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+            <div>
+              <label htmlFor="ta-freq" className={label}>How Often Do You Order?</label>
+              <select id="ta-freq" className={inputCard}>
+                <option>Weekly</option>
+                <option>Fortnightly</option>
+                <option>Monthly</option>
+                <option>One-off order</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="ta-notes" className={label}>Quantities and Other Notes</label>
               <textarea
                 id="ta-notes"
                 rows={3}
-                placeholder="Tell us if you require specific brand SKUs, recurring pallet drops, or express initial delivery..."
+                placeholder="Tell us roughly how much you need, or ask about anything else."
                 className={inputCard}
               />
             </div>
@@ -207,12 +173,11 @@ export default function TradeAccountForm() {
               type="submit"
               className="flex w-full items-center justify-center gap-space-sm rounded-xl bg-secondary-container px-space-lg py-3 text-headline-sm text-on-secondary shadow-md transition-all hover:bg-trade-orange-hover"
             >
-              <span>Submit Trade Application</span>
+              <span>Send Trade Enquiry</span>
               <Icon name="arrow_forward" className="text-[20px]" />
             </button>
             <p className="text-center text-body-sm text-on-surface-variant">
-              By submitting, you agree to MB Trade Supplies Ltd standard
-              commercial trade terms. No upfront deposit required.
+              We only use your details to respond to your enquiry.
             </p>
           </div>
         </form>
@@ -230,26 +195,19 @@ export default function TradeAccountForm() {
               <Icon name="check_circle" className="text-[36px]" />
             </div>
             <h3 id="success-title" className="text-headline-lg-mobile text-on-surface md:text-headline-lg">
-              Application Received!
+              Thank You for Your Enquiry
             </h3>
             <p className="text-body-md text-on-surface-variant">
-              Thank you for applying for a trade account with MB Trade Supplies
-              Ltd. Your application reference is{" "}
-              <strong className="text-on-surface">#MBT-2026-T924</strong>.
+              Thank you for contacting AM Trade Supplies Ltd. We will review your
+              details and be in touch.
             </p>
-            <div className="space-y-1 rounded-xl bg-surface-subtle p-space-md text-left text-body-sm">
-              <p className="text-label-lg text-on-surface">What happens next:</p>
-              <p className="text-on-surface-variant">• Commercial credit &amp; business verification check underway.</p>
-              <p className="text-on-surface-variant">• Your assigned account manager will email your wholesale login within 24 hours.</p>
-              <p className="text-on-surface-variant">• Wholesale price lists and bulk pallet matrices will be attached.</p>
-            </div>
             <button
               type="button"
               autoFocus
               onClick={() => setDone(false)}
               className="w-full rounded-xl bg-secondary-container py-2.5 text-headline-sm text-on-secondary transition-all hover:bg-trade-orange-hover"
             >
-              Done &amp; Return to Page
+              Close
             </button>
           </div>
         </div>

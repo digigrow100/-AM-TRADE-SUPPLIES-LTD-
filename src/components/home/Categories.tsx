@@ -7,24 +7,26 @@ const categories = [
   {
     title: "Wholesale Drinks",
     image: images.homeDrinks,
-    alt: "Refrigerated shelves stacked with canned soft drinks, sparkling water and juices",
-    badge: "High Stock",
+    alt: "Refrigerated display of bottled drinks and juices",
     href: "/products-services#drinks",
-    body: "Comprehensive range of soft drinks, bottled water, and juices. Supplied in bulk pallets with competitive trade pricing.",
+    cta: "See the drinks range",
+    body: "Soft drinks, bottled water and juices for shops, cafés, takeaways and caterers.",
   },
   {
     title: "Wholesale Cooking Oils",
     image: images.homeOils,
-    alt: "Bulk cooking oil cartons and 20 litre drums of rapeseed oil",
+    alt: "Green cooking oil containers and cartons on a commercial kitchen bench",
     href: "/products-services#oils",
-    body: "Bulk vegetable and rapeseed oils for restaurants, takeaways, caterers, and commercial kitchens. Reliable UK trade supply with competitive wholesale pricing.",
+    cta: "See the cooking oils range",
+    body: "Rapeseed oil and vegetable oil for restaurants, takeaways, cafés and commercial kitchens.",
   },
   {
     title: "Wholesale Flour",
     image: images.homeFlour,
-    alt: "25kg sacks of plain, pizza and self-raising bakery flour",
+    alt: "Stack of paper flour sacks on a wooden pallet in a warehouse",
     href: "/products-services#flour",
-    body: "Professional plain, pizza, and self-raising flour for bakeries, pizzerias, restaurants, and commercial kitchens. Reliable UK trade supply with competitive wholesale pricing.",
+    cta: "See the flour range",
+    body: "Plain flour, pizza flour and self-raising flour for bakeries, pizzerias and catering kitchens.",
   },
 ];
 
@@ -36,16 +38,18 @@ export default function Categories() {
     >
       <div className="mb-space-xl flex flex-col justify-between gap-space-sm sm:flex-row sm:items-end">
         <div>
-          <h2 className="text-headline-lg-mobile md:text-headline-lg text-on-surface">Core Product Categories</h2>
+          <h2 className="text-headline-lg-mobile text-on-surface md:text-headline-lg">
+            Our Wholesale Product Range
+          </h2>
           <p className="mt-1 text-body-md text-on-surface-variant">
-            Premium wholesale supplies for your business.
+            Drinks, cooking oils and flour for trade customers.
           </p>
         </div>
         <Link
           href="/products-services"
           className="group inline-flex items-center gap-space-xs self-start text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover sm:self-auto"
         >
-          <span>View All Services</span>
+          <span>View All Products</span>
           <Icon
             name="arrow_forward"
             className="text-[18px] transition-transform group-hover:translate-x-1"
@@ -67,14 +71,6 @@ export default function Categories() {
                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              {c.badge && (
-                <div className="absolute right-space-sm top-space-sm">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-stock-green-bg px-space-sm py-0.5 text-label-md text-stock-green shadow-sm">
-                    <span className="h-1.5 w-1.5 rounded-full bg-stock-green" />
-                    {c.badge}
-                  </span>
-                </div>
-              )}
             </div>
             <div className="flex flex-grow flex-col justify-between p-space-lg">
               <div>
@@ -88,7 +84,7 @@ export default function Categories() {
                   href={c.href}
                   className="inline-flex items-center gap-space-xs text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover"
                 >
-                  <span>Browse Catalogue</span>
+                  <span>{c.cta}</span>
                   <Icon name="arrow_forward" className="text-[16px]" />
                 </Link>
               </div>

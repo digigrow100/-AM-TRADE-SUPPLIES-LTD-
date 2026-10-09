@@ -1,10 +1,10 @@
 import Icon from "@/components/Icon";
 
-const stats = [
-  { value: "15+", label: "Years Established" },
-  { value: "500+", label: "Pallet Stock SKUs" },
-  { value: "1.2k+", label: "Active Trade Accounts" },
-  { value: "24h", label: "Average Approval" },
+const facts = [
+  { label: "Location", value: "Stoke-on-Trent, UK" },
+  { label: "Customers", value: "Businesses" },
+  { label: "Range", value: "Drinks, oils and flour" },
+  { label: "Enquiries", value: "Online form" },
 ];
 
 export default function Hero() {
@@ -13,25 +13,27 @@ export default function Hero() {
       <div className="pointer-events-none absolute -right-16 -top-16 h-80 w-80 rounded-full bg-secondary-container/10 blur-3xl" />
       <div className="relative z-10 max-w-3xl space-y-space-sm">
         <div className="inline-flex items-center gap-2 rounded-full bg-surface-card/10 px-3 py-1 text-label-md uppercase tracking-wider text-secondary-fixed">
-          <Icon name="verified_user" className="text-[14px]" /> Wholesale Verification Portal
+          <Icon name="verified_user" className="text-[14px]" /> Trade Enquiries
         </div>
         <h1 className="text-headline-lg-mobile tracking-tight text-on-primary md:text-display-hero">
-          Open a Trade Account &amp; Contact Us
+          Contact AM Trade Supplies Ltd: Wholesale Food and Drink Enquiries
         </h1>
         <p className="max-w-2xl text-body-lg leading-relaxed text-surface-container-highest">
-          Get approved for wholesale trade pricing, credit terms, and dedicated
-          account management within 24 hours. Serving food preparation,
-          hospitality, and catering chains nationwide.
+          Get in touch with AM Trade Supplies Ltd, a wholesale food and drink
+          supplier in Stoke-on-Trent. Send us your trade enquiry and tell us
+          what your business needs.
         </p>
       </div>
-      <div className="relative z-10 mt-space-lg grid grid-cols-2 gap-space-sm rounded-xl bg-navy-deep/60 p-space-md sm:grid-cols-4">
-        {stats.map((s) => (
-          <div key={s.label}>
-            <p className="text-headline-md text-secondary-container">{s.value}</p>
-            <p className="text-label-md text-surface-container-highest">{s.label}</p>
+      <dl className="relative z-10 mt-space-lg grid grid-cols-2 gap-space-sm rounded-xl bg-navy-deep/60 p-space-md sm:grid-cols-4">
+        {facts.map((f) => (
+          <div key={f.label}>
+            <dt className="text-label-md uppercase tracking-wider text-surface-container-highest">
+              {f.label}
+            </dt>
+            <dd className="mt-1 text-headline-sm text-secondary-container">{f.value}</dd>
           </div>
         ))}
-      </div>
+      </dl>
     </section>
   );
 }

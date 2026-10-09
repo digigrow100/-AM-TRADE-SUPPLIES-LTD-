@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Icon from "@/components/Icon";
-import { site } from "@/lib/site";
 
 const field =
   "w-full rounded-lg bg-surface-subtle px-space-md py-2.5 text-body-sm text-on-surface outline-none focus:ring-2 focus:ring-secondary-container";
@@ -20,52 +20,50 @@ export default function QuickQuote() {
         <div className="pointer-events-none absolute -bottom-10 -right-10 h-44 w-44 rounded-full bg-secondary-container opacity-10 blur-2xl" />
         <div className="space-y-space-xs">
           <span className="text-label-md font-semibold uppercase tracking-wider text-secondary-fixed">
-            Immediate Price Manifest
+            Not Sure What You Need?
           </span>
-          <h3 className="text-headline-lg-mobile md:text-headline-lg text-on-primary">Download Q2 Trade Catalogue</h3>
+          <h3 className="text-headline-lg-mobile text-on-primary md:text-headline-lg">
+            Tell Us About Your Business
+          </h3>
           <p className="text-body-md text-surface-container-highest">
-            Access our comprehensive 48-page commodity price sheet including
-            volume rebates, barcode specifications, pallet dimensions, and
-            seasonal booking windows.
+            Every business buys differently. Describe what you sell or cook and
+            we will help you choose from our range of drinks, oils and flour.
           </p>
         </div>
-        <div className="space-y-space-sm rounded-lg bg-surface-card/10 p-space-md backdrop-blur-md">
-          <div className="flex items-center gap-space-sm">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-secondary-container text-on-secondary">
-              <Icon name="picture_as_pdf" className="text-[24px]" />
-            </div>
-            <div className="min-w-0">
-              <p className="break-words text-label-lg text-on-primary">MB_Trade_Catalogue_2026_Q2.pdf</p>
-              <p className="text-body-sm text-surface-container-highest">PDF Document • 4.8 MB • Updated Weekly</p>
-            </div>
-          </div>
-          <button
-            type="button"
-            className="mt-space-sm flex w-full items-center justify-center gap-space-xs rounded-lg bg-surface-card px-space-md py-2.5 text-label-lg text-on-surface shadow transition-colors hover:bg-surface-subtle"
+        <ul className="space-y-space-sm text-body-sm text-surface-container-highest">
+          {[
+            "Which products you need",
+            "Roughly how much and how often",
+            "Your delivery postcode",
+          ].map((t) => (
+            <li key={t} className="flex items-start gap-space-xs">
+              <Icon name="check_circle" className="mt-0.5 text-[18px] text-secondary-container" />
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="flex flex-col gap-space-sm sm:flex-row">
+          <Link
+            href="/contact"
+            className="flex items-center justify-center gap-space-xs rounded-lg bg-surface-card px-space-md py-2.5 text-label-lg text-on-surface shadow transition-colors hover:bg-surface-subtle"
           >
-            <Icon name="download" className="text-[18px]" />
-            <span>Download Trade Price List (PDF)</span>
-          </button>
-        </div>
-        <div className="space-y-space-sm pt-space-md">
-          <p className="text-label-md uppercase tracking-wider text-surface-container-highest">
-            Direct Procurement Hotline
-          </p>
-          <a href={site.phoneHref} className="block text-headline-md text-secondary-container hover:underline">
-            {site.phone}
-          </a>
-          <p className="text-body-sm text-surface-container-highest">
-            Dedicated trade account managers on duty 8:00 AM – 5:30 PM (Mon-Fri)
-          </p>
+            Full Enquiry Form
+          </Link>
+          <Link
+            href="/about"
+            className="flex items-center justify-center gap-space-xs rounded-lg bg-surface-card/10 px-space-md py-2.5 text-label-lg text-on-primary transition-colors hover:bg-surface-card/20"
+          >
+            About Us
+          </Link>
         </div>
       </div>
 
       <div className="space-y-space-md rounded-xl bg-surface-card p-space-md shadow-sm sm:p-space-xl lg:col-span-7">
         <div>
-          <h3 className="text-headline-md text-on-surface">Request a Rapid Trade Quote</h3>
+          <h3 className="text-headline-md text-on-surface">Request a Trade Quote</h3>
           <p className="text-body-md text-on-surface-variant">
-            Submit your pallet breakdown or weekly requirements below. We issue
-            formal quotes within 2 business hours.
+            Send us your product list and we will prepare a quote based on your
+            order.
           </p>
         </div>
         <form
@@ -78,69 +76,68 @@ export default function QuickQuote() {
         >
           <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
             <div className="space-y-space-xs">
-              <label htmlFor="q-company" className={label}>Company / Business Name *</label>
-              <input id="q-company" required type="text" placeholder="e.g. Apex Catering Supplies Ltd" className={field} />
+              <label htmlFor="q-company" className={label}>Business Name *</label>
+              <input id="q-company" required type="text" placeholder="Your business name" className={field} />
             </div>
             <div className="space-y-space-xs">
-              <label htmlFor="q-reg" className={label}>Company Reg / VAT Number</label>
-              <input id="q-reg" type="text" placeholder="e.g. GB 412 8931 04" className={field} />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
-            <div className="space-y-space-xs">
-              <label htmlFor="q-name" className={label}>Contact Full Name *</label>
-              <input id="q-name" required type="text" placeholder="e.g. David Morrison" className={field} />
-            </div>
-            <div className="space-y-space-xs">
-              <label htmlFor="q-email" className={label}>Work Email Address *</label>
-              <input id="q-email" required type="email" placeholder="david@business.co.uk" className={field} />
+              <label htmlFor="q-name" className={label}>Contact Name *</label>
+              <input id="q-name" required type="text" placeholder="Your name" className={field} />
             </div>
           </div>
           <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
             <div className="space-y-space-xs">
-              <label htmlFor="q-interest" className={label}>Primary Product Interest *</label>
+              <label htmlFor="q-email" className={label}>Email Address *</label>
+              <input id="q-email" required type="email" placeholder="name@business.co.uk" className={field} />
+            </div>
+            <div className="space-y-space-xs">
+              <label htmlFor="q-tel" className={label}>Phone Number</label>
+              <input id="q-tel" type="tel" placeholder="07..." className={field} />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
+            <div className="space-y-space-xs">
+              <label htmlFor="q-interest" className={label}>Main Product Interest *</label>
               <select id="q-interest" className={field}>
-                <option>Mixed Consignment (Drinks + Oils + Flour)</option>
-                <option>Wholesale Drinks &amp; Carbonated Cans</option>
-                <option>Wholesale Cooking Oils (20L Drums)</option>
-                <option>Commercial Bakery Flour (25kg Sacks)</option>
-                <option>Full Truckload / Contract Supply</option>
+                <option>Drinks, oils and flour</option>
+                <option>Soft drinks, bottled water and juices</option>
+                <option>Rapeseed oil and vegetable oil</option>
+                <option>Plain, pizza and self-raising flour</option>
               </select>
             </div>
             <div className="space-y-space-xs">
-              <label htmlFor="q-freq" className={label}>Estimated Pallet Frequency</label>
+              <label htmlFor="q-freq" className={label}>How Often Do You Order?</label>
               <select id="q-freq" className={field}>
-                <option>Weekly (1 - 5 Pallets)</option>
-                <option>Fortnightly (2 - 8 Pallets)</option>
-                <option>Monthly (Full Artic Load / 26 Pallets)</option>
-                <option>One-Off Spot Order</option>
+                <option>Weekly</option>
+                <option>Fortnightly</option>
+                <option>Monthly</option>
+                <option>One-off order</option>
               </select>
             </div>
           </div>
           <div className="space-y-space-xs">
-            <label htmlFor="q-notes" className={label}>Delivery Postcode &amp; Forklift Availability</label>
+            <label htmlFor="q-notes" className={label}>Delivery Postcode and Notes</label>
             <textarea
               id="q-notes"
               rows={3}
-              placeholder="e.g. ST3 1PF. Forklift available on site for rapid offload, delivery access via Uttoxeter Road entrance."
+              placeholder="Your delivery postcode, the products you need and roughly how much."
               className={field}
             />
           </div>
           <div className="flex flex-col items-stretch justify-between gap-space-md pt-space-xs sm:flex-row sm:items-center">
             <div className="flex items-center gap-space-xs text-body-sm text-on-surface-variant">
               <Icon name="lock" className="text-[18px] text-stock-green" />
-              <span>GDPR compliant. Data never shared with third parties.</span>
+              <span>We only use your details to respond to your enquiry.</span>
             </div>
             <button
               type="submit"
               className="w-full rounded-lg bg-secondary-container px-space-xl py-3 text-label-lg text-on-secondary shadow transition-colors hover:bg-trade-orange-hover sm:w-auto"
             >
-              Submit Trade Enquiry
+              Send Trade Enquiry
             </button>
           </div>
           {sent && (
             <p role="status" className="rounded-lg bg-stock-green-bg p-space-sm text-center text-body-sm text-stock-green">
-              Trade quote request submitted successfully. A specialist will contact you shortly.
+              Thank you for your enquiry. We will be in touch.
             </p>
           )}
         </form>

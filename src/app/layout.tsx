@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import JsonLd from "@/components/JsonLd";
+import { organizationLd, websiteLd } from "@/lib/seo";
+import { site, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,13 +23,14 @@ const materialSymbols = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "MB Trade Supplies Ltd | UK Wholesale Drinks, Cooking Oils & Flour",
-    template: "%s | MB Trade Supplies Ltd",
+    default: `${site.name} | Wholesale Food & Drink Supplier`,
+    template: `%s | ${site.name}`,
   },
-  description:
-    "UK B2B wholesale supplier of drinks, commercial cooking oils and bakery flour. Pallet supply, trade pricing and credit terms from Stoke-on-Trent.",
+  description: site.description,
+  applicationName: site.name,
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
@@ -38,8 +42,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${materialSymbols.variable}`}>
+    <html lang="en-GB" className={`${inter.variable} ${materialSymbols.variable}`}>
       <body className="bg-surface text-on-surface antialiased">
+        <JsonLd data={organizationLd} />
+        <JsonLd data={websiteLd} />
         <Header />
         <main className="w-full bg-surface">{children}</main>
         <Footer />
