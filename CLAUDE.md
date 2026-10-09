@@ -1,27 +1,39 @@
 # CLAUDE.md
 
-Next.js (App Router, TypeScript) site. Read the relevant guide in `node_modules/next/dist/docs/` before writing Next.js code.
+Next.js (App Router, TypeScript, Tailwind CSS v4) site. Read the relevant guide in `node_modules/next/dist/docs/` before writing Next.js code.
 
 ## Where to make changes
 
-| Change                    | File                         |
-| ------------------------- | ---------------------------- |
-| Home page                 | `src/app/page.tsx`           |
-| Other pages               | `src/app/<route>/page.tsx`   |
-| Header                    | `src/components/Header.tsx`  |
-| Footer                    | `src/components/Footer.tsx`  |
-| Layout / metadata         | `src/app/layout.tsx`         |
-| Global CSS                | `src/app/globals.css`        |
-| Site config               | `next.config.ts`             |
-| Optimized images          | `src/assets/images/`         |
-| Static / public files     | `public/`                    |
+| Change                     | File                                                               |
+| -------------------------- | ------------------------------------------------------------------ |
+| Home page                  | `src/app/page.tsx` (sections in `src/components/home/`)            |
+| About page                 | `src/app/about/page.tsx` (`src/components/about/`)                 |
+| Products & Services page   | `src/app/products-services/page.tsx` (`src/components/services/`) |
+| Contact / trade account    | `src/app/contact/page.tsx` (`src/components/contact/`)             |
+| Other pages                | `src/app/<route>/page.tsx`                                         |
+| Header (global)            | `src/components/Header.tsx`                                        |
+| Footer (global)            | `src/components/Footer.tsx`                                        |
+| Layout / metadata / fonts  | `src/app/layout.tsx`                                               |
+| Global CSS / design tokens | `src/app/globals.css`                                              |
+| Nav links, phone, address  | `src/lib/site.ts`                                                  |
+| Site config                | `next.config.ts`                                                   |
+| Optimized images           | `src/assets/images/` (placeholder URLs: `src/lib/images.ts`)       |
+| Icon font subset           | `src/assets/fonts/material-symbols.woff2`                          |
+| Static / public files      | `public/`                                                          |
+
+Header and Footer are rendered once in `src/app/layout.tsx` — never add them to individual pages.
 
 ## Images
 
 - ALL content images go in `src/assets/images/` — never `public/`.
 - Import them and render with Next.js `<Image />` for automatic optimization.
 - `.webp` preferred.
-- Always provide `alt`, `width` and `height`.
+- Always provide `alt`, `width` and `height` (or `fill` + `sizes` inside a sized, relative container).
+- The pages currently use remote placeholder photos listed in `src/lib/images.ts`; replace each with a file in `src/assets/images/` when real photos are supplied.
+
+## Icons
+
+Icons use a self-hosted Material Symbols subset. A new icon name only renders after it is added to `src/assets/fonts/material-symbols.woff2` (regenerate it from Google Fonts with the `icon_names` parameter).
 
 ## Working rules
 
