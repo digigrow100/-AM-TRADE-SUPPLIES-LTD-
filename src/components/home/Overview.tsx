@@ -36,7 +36,7 @@ export default function Overview() {
             key={s.label}
             className="flex min-h-[140px] flex-col items-center justify-center rounded-xl bg-surface-card p-space-lg text-center shadow-sm transition-shadow hover:shadow-md"
           >
-            <span className="text-stat-metric tracking-tight text-secondary-container">
+            <span className="text-stat-metric tracking-tight text-secondary">
               {s.value}
             </span>
             <span className="mt-space-xs text-label-lg text-on-surface">{s.label}</span>

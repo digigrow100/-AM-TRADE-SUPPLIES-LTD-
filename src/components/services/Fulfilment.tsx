@@ -24,7 +24,7 @@ const cards = [
 
 export default function Fulfilment() {
   return (
-    <section className="mt-space-xl rounded-xl bg-surface-card p-space-md py-space-lg shadow-sm sm:p-space-lg md:mt-space-2xl md:p-space-xl">
+    <section className="mb-space-xl mt-space-xl rounded-xl bg-surface-card p-space-md py-space-lg shadow-sm sm:p-space-lg md:mb-space-2xl md:mt-space-2xl md:p-space-xl">
       <div className="mb-space-lg max-w-3xl">
         <span className="text-label-md font-bold uppercase tracking-wider text-secondary">
           How It Works

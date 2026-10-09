@@ -54,7 +54,7 @@ export default function WhoWeAre() {
             </div>
             <Link
               href={p.link.href}
-              className="flex items-center gap-space-xs text-label-md text-secondary-container hover:underline"
+              className="inline-flex items-center gap-space-xs py-2 text-label-lg text-secondary hover:underline"
             >
               <span>{p.link.label}</span>
               <Icon name="arrow_forward" className="text-[16px]" />

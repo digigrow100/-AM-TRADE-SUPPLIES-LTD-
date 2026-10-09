@@ -37,7 +37,7 @@ export default function Sidebar() {
               <Icon name="phone_in_talk" className="mt-0.5 text-[22px] text-secondary" />
               <div>
                 <p className="text-label-lg text-on-surface">Phone</p>
-                <a href={phoneHref} className="block text-headline-sm text-secondary-container hover:underline">
+                <a href={phoneHref} className="block text-headline-sm text-secondary hover:underline">
                   {site.phone}
                 </a>
               </div>

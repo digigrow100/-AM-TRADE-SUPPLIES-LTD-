@@ -10,14 +10,14 @@ export default function Banner() {
           aria-label="Breadcrumb"
           className="flex items-center gap-space-xs text-label-md uppercase tracking-wider text-surface-container-highest"
         >
-          <Link href="/" className="transition-colors hover:text-on-primary">
+          <Link href="/" className="inline-block py-2 transition-colors hover:text-on-primary">
             Home
           </Link>
           <Icon name="chevron_right" className="text-[14px]" />
           <span className="text-secondary-fixed">About Us</span>
         </nav>
         <h1 className="text-headline-lg-mobile tracking-tight text-on-primary md:text-headline-lg">
-          About AM Trade Supplies Ltd: B2B Wholesale Supplier in Stoke-on-Trent
+          About AM Trade Supplies Ltd: B2B Wholesale Supplier in <span className="whitespace-nowrap">Stoke-on-Trent</span>
         </h1>
         <p className="max-w-2xl text-body-lg leading-relaxed text-surface-container-highest">
           AM Trade Supplies Ltd is a B2B wholesale supplier in Stoke-on-Trent,

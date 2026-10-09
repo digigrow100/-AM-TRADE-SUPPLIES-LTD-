@@ -28,7 +28,7 @@ export default function CatalogueHero() {
         </h1>
         <p className="mx-auto max-w-2xl text-body-lg text-surface-container-highest">
           AM Trade Supplies Ltd supplies wholesale drinks, cooking oils and flour
-          to trade customers from Stoke-on-Trent. Browse the range below, then
+          to trade customers from <span className="whitespace-nowrap">Stoke-on-Trent</span>. Browse the range below, then
           ask for a quote.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-space-xs pt-space-sm">
@@ -36,14 +36,14 @@ export default function CatalogueHero() {
             <a
               key={p.href}
               href={p.href}
-              className="rounded-full bg-surface-card/15 px-space-md py-1.5 text-label-md text-on-primary transition-all hover:bg-surface-card/25"
+              className="rounded-full bg-surface-card/15 px-space-md py-2.5 text-label-md text-on-primary transition-all hover:bg-surface-card/25"
             >
               {p.label}
             </a>
           ))}
           <Link
             href="/contact"
-            className="rounded-full bg-secondary-container px-space-md py-1.5 text-label-md text-on-secondary shadow-sm transition-all hover:bg-trade-orange-hover"
+            className="rounded-full bg-cta px-space-md py-2.5 text-label-md text-on-secondary shadow-sm transition-all hover:bg-cta-hover"
           >
             Request a Quote
           </Link>

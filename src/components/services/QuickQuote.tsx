@@ -130,7 +130,7 @@ export default function QuickQuote() {
             </div>
             <button
               type="submit"
-              className="w-full rounded-lg bg-secondary-container px-space-xl py-3 text-label-lg text-on-secondary shadow transition-colors hover:bg-trade-orange-hover sm:w-auto"
+              className="w-full rounded-lg bg-cta px-space-xl py-3 text-label-lg text-on-secondary shadow transition-colors hover:bg-cta-hover sm:w-auto"
             >
               Send Trade Enquiry
             </button>

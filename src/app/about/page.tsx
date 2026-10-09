@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMetadata({ title, description, path: "/abo
 
 export default function AboutPage() {
   return (
-    <Container className="pt-space-md md:pt-space-lg">
+    <Container className="pt-space-lg md:pt-space-xl">
       <JsonLd data={webPageLd("AboutPage", { name: title, description, path: "/about" })} />
       <JsonLd
         data={breadcrumbLd([

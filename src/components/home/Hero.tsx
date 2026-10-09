@@ -22,17 +22,17 @@ export default function Hero() {
           B2B Wholesale • Stoke-on-Trent
         </div>
         <h1 className="max-w-3xl text-display-hero-mobile tracking-tight text-on-primary md:text-display-hero">
-          Wholesale Food and Drink Supplier in Stoke-on-Trent
+          Wholesale Food and Drink Supplier in <span className="whitespace-nowrap">Stoke-on-Trent</span>
         </h1>
         <p className="mx-auto mt-space-md max-w-2xl text-body-lg text-surface-container-high">
           AM Trade Supplies Ltd is a B2B wholesale food and drink supplier based
-          in Stoke-on-Trent. We supply soft drinks, bottled water, juices,
+          in <span className="whitespace-nowrap">Stoke-on-Trent</span>. We supply soft drinks, bottled water, juices,
           cooking oils and flour to businesses that buy in trade quantities.
         </p>
         <div className="mt-space-xl flex w-full flex-col items-stretch justify-center gap-space-md sm:w-auto sm:flex-row sm:items-center">
           <Link
             href="/services"
-            className="flex items-center justify-center gap-space-xs rounded-lg bg-secondary-container px-space-xl py-3 text-label-lg text-on-secondary shadow-md transition-all hover:-translate-y-0.5 hover:bg-trade-orange-hover"
+            className="flex items-center justify-center gap-space-xs rounded-lg bg-cta px-space-xl py-3 text-label-lg text-on-secondary shadow-md transition-all hover:-translate-y-0.5 hover:bg-cta-hover"
           >
             View Our Products
           </Link>

@@ -33,7 +33,7 @@ export default function AccountCta() {
             <div className="flex flex-col gap-space-md pt-space-xs sm:flex-row sm:flex-wrap sm:items-center">
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-space-xs rounded-lg bg-secondary-container px-space-lg py-3 text-label-lg text-on-secondary shadow-md transition-colors hover:bg-trade-orange-hover"
+                className="flex items-center justify-center gap-space-xs rounded-lg bg-cta px-space-lg py-3 text-label-lg text-on-secondary shadow-md transition-colors hover:bg-cta-hover"
               >
                 Request a Trade Quote <Icon name="arrow_forward" className="text-[18px]" />
               </Link>

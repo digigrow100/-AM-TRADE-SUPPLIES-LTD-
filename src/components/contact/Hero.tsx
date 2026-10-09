@@ -9,7 +9,7 @@ const facts = [
 
 export default function Hero() {
   return (
-    <section className="relative mb-space-xl w-full overflow-hidden rounded-2xl bg-primary-container p-space-md py-space-lg text-on-primary shadow-md sm:p-space-lg md:p-space-xl">
+    <section className="relative mb-space-xl w-full overflow-hidden rounded-2xl bg-primary-container px-space-md py-space-xl text-on-primary shadow-md sm:p-space-lg md:p-space-xl">
       <div className="pointer-events-none absolute -right-16 -top-16 h-80 w-80 rounded-full bg-secondary-container/10 blur-3xl" />
       <div className="relative z-10 max-w-3xl space-y-space-sm">
         <div className="inline-flex items-center gap-2 rounded-full bg-surface-card/10 px-3 py-1 text-label-md uppercase tracking-wider text-secondary-fixed">

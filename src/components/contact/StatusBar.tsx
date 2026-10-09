@@ -7,7 +7,7 @@ export default function StatusBar() {
       aria-label="Breadcrumb"
       className="mb-space-lg flex w-full items-center gap-space-xs rounded-xl bg-surface-card p-space-md text-body-sm text-on-surface-variant shadow-sm"
     >
-      <Link href="/" className="text-label-lg transition-colors hover:text-secondary">
+      <Link href="/" className="inline-block py-1 text-label-lg transition-colors hover:text-secondary">
         Home
       </Link>
       <Icon name="chevron_right" className="text-[16px] text-outline" />

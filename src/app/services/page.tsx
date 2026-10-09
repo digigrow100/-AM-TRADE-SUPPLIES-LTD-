@@ -50,7 +50,7 @@ const faqs: FaqItem[] = [
 
 export default function ServicesPage() {
   return (
-    <Container className="pt-space-md md:pt-space-lg">
+    <Container className="pt-space-lg md:pt-space-xl">
       <JsonLd
         data={webPageLd(
           "CollectionPage",

@@ -50,7 +50,7 @@ export default function WhatWeSupply() {
         </div>
         <Link
           href="/services"
-          className="flex items-center gap-space-xs whitespace-nowrap text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover"
+          className="flex items-center gap-space-xs whitespace-nowrap py-2 text-label-lg text-secondary transition-colors hover:text-cta-hover"
         >
           View the full product range <Icon name="arrow_forward" className="text-[18px]" />
         </Link>
@@ -88,7 +88,7 @@ export default function WhatWeSupply() {
             <div className="p-space-lg pt-0">
               <Link
                 href={it.href}
-                className="inline-flex items-center gap-space-xs text-label-lg font-semibold text-secondary-container transition-colors hover:text-trade-orange-hover"
+                className="inline-flex items-center gap-space-xs py-2 text-label-lg font-semibold text-secondary transition-colors hover:text-cta-hover"
               >
                 {it.cta} <Icon name="arrow_forward" className="text-[18px]" />
               </Link>

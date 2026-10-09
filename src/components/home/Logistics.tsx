@@ -29,7 +29,7 @@ export default function Logistics() {
           <div className="grid grid-cols-1 gap-space-md pt-space-sm sm:grid-cols-3">
             {steps.map((s) => (
               <div key={s.label} className="rounded-lg bg-surface-card p-space-md shadow-sm">
-                <span className="block text-headline-md text-secondary-container">{s.value}</span>
+                <span className="block text-headline-md text-secondary">{s.value}</span>
                 <span className="text-body-sm text-on-surface-variant">{s.label}</span>
               </div>
             ))}
@@ -44,7 +44,7 @@ export default function Logistics() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-space-xs text-label-lg text-secondary hover:underline"
+            className="inline-flex items-center gap-space-xs py-2 text-label-lg text-secondary hover:underline"
           >
             Check delivery to your area <Icon name="arrow_forward" className="text-[18px]" />
           </Link>

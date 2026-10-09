@@ -46,7 +46,7 @@ const faqs: FaqItem[] = [
 
 export default function ContactPage() {
   return (
-    <Container className="pt-space-md md:pt-space-lg">
+    <Container className="pt-space-lg md:pt-space-xl">
       <JsonLd data={webPageLd("ContactPage", { name: title, description, path: "/contact" })} />
       <JsonLd
         data={breadcrumbLd([

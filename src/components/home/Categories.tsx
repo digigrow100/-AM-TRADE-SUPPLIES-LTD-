@@ -47,7 +47,7 @@ export default function Categories() {
         </div>
         <Link
           href="/services"
-          className="group inline-flex items-center gap-space-xs self-start text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover sm:self-auto"
+          className="group inline-flex items-center gap-space-xs self-start py-2 text-label-lg text-secondary transition-colors hover:text-cta-hover sm:self-auto"
         >
           <span>View All Products</span>
           <Icon
@@ -82,7 +82,7 @@ export default function Categories() {
               <div className="mt-space-lg pt-space-sm">
                 <Link
                   href={c.href}
-                  className="inline-flex items-center gap-space-xs text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover"
+                  className="inline-flex items-center gap-space-xs py-2 text-label-lg text-secondary transition-colors hover:text-cta-hover"
                 >
                   <span>{c.cta}</span>
                   <Icon name="arrow_forward" className="text-[16px]" />

@@ -4,7 +4,7 @@ import { images } from "@/lib/images";
 import { productCategories } from "@/lib/products";
 import { footerPageLinks, phoneHref, site } from "@/lib/site";
 
-const linkClass = "transition-colors hover:text-on-primary";
+const linkClass = "block py-2 transition-colors hover:text-on-primary";
 
 export default function Footer() {
   return (
@@ -20,6 +20,8 @@ export default function Footer() {
               <Image
                 src={images.logo}
                 alt={`${site.name} logo`}
+                width={130}
+                height={40}
                 className="h-10 w-auto object-contain"
               />
             </Link>
@@ -32,7 +34,7 @@ export default function Footer() {
 
           <div>
             <h2 className="mb-space-md text-headline-sm text-on-primary">Quick Links</h2>
-            <ul className="space-y-space-sm text-body-sm text-surface-container-highest">
+            <ul className="text-body-sm text-surface-container-highest">
               {footerPageLinks.map((l) => (
                 <li key={l.label}>
                   <Link className={linkClass} href={l.href}>
@@ -45,7 +47,7 @@ export default function Footer() {
 
           <div>
             <h2 className="mb-space-md text-headline-sm text-on-primary">Our Products</h2>
-            <ul className="space-y-space-sm text-body-sm text-surface-container-highest">
+            <ul className="text-body-sm text-surface-container-highest">
               {productCategories.map((c) => (
                 <li key={c.id}>
                   <Link className={linkClass} href={c.href}>
@@ -64,20 +66,20 @@ export default function Footer() {
             </p>
             <Link
               href="/contact"
-              className="text-label-lg text-secondary-container hover:underline"
+              className="inline-block py-2 text-label-lg text-secondary-container hover:underline"
             >
               Request a trade quote
             </Link>
             {phoneHref && site.phone && (
               <p className="mt-space-sm text-body-sm text-surface-container-highest">
-                <a href={phoneHref} className={linkClass}>
+                <a href={phoneHref} className="inline-block py-1 transition-colors hover:text-on-primary">
                   {site.phone}
                 </a>
               </p>
             )}
             {site.email && (
               <p className="mt-space-xs break-all text-body-sm text-surface-container-highest">
-                <a href={`mailto:${site.email}`} className={linkClass}>
+                <a href={`mailto:${site.email}`} className="inline-block py-1 transition-colors hover:text-on-primary">
                   {site.email}
                 </a>
               </p>

@@ -171,7 +171,7 @@ export default function TradeAccountForm() {
           <div className="space-y-space-sm pt-space-xs">
             <button
               type="submit"
-              className="flex w-full items-center justify-center gap-space-sm rounded-xl bg-secondary-container px-space-lg py-3 text-headline-sm text-on-secondary shadow-md transition-all hover:bg-trade-orange-hover"
+              className="flex w-full items-center justify-center gap-space-sm rounded-xl bg-cta px-space-lg py-3 text-headline-sm text-on-secondary shadow-md transition-all hover:bg-cta-hover"
             >
               <span>Send Trade Enquiry</span>
               <Icon name="arrow_forward" className="text-[20px]" />
@@ -205,7 +205,7 @@ export default function TradeAccountForm() {
               type="button"
               autoFocus
               onClick={() => setDone(false)}
-              className="w-full rounded-xl bg-secondary-container py-2.5 text-headline-sm text-on-secondary transition-all hover:bg-trade-orange-hover"
+              className="w-full rounded-xl bg-cta py-2.5 text-headline-sm text-on-secondary transition-all hover:bg-cta-hover"
             >
               Close
             </button>

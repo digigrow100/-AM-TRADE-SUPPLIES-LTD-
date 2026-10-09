@@ -55,6 +55,9 @@
   --color-surface-subtle: #f8fafc;
   --color-surface-card: #ffffff;
   --color-border-crisp: #e2e8f0;
+  /* Accessible CTA orange: white text on it passes WCAG AA (5.2:1). */
+  --color-cta: #c2410c;
+  --color-cta-hover: #9a3412;
   --color-stock-green: #16a34a;
   --color-stock-green-bg: #dcfce7;
 

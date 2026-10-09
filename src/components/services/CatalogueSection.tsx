@@ -89,7 +89,7 @@ export default function CatalogueSection() {
           <h2 className="text-headline-lg-mobile text-on-surface md:text-headline-lg">
             Wholesale Products for Retailers, Kitchens and Bakeries
           </h2>
-          <p className="text-body-md text-on-surface-variant">
+          <p className="mt-space-xs text-body-md text-on-surface-variant">
             Three categories, eight product lines. Not sure what you need? Our{" "}
             <Link href="/about" className="font-semibold text-secondary underline-offset-2 hover:underline">
               about page
@@ -99,7 +99,7 @@ export default function CatalogueSection() {
         </div>
         <Link
           href="#quick-quote"
-          className="flex items-center gap-1 text-label-lg text-secondary-container transition-colors hover:text-trade-orange-hover"
+          className="flex items-center gap-1 py-2 text-label-lg text-secondary transition-colors hover:text-cta-hover"
         >
           Request a Quote <Icon name="arrow_forward" className="text-[18px]" />
         </Link>
@@ -138,14 +138,14 @@ export default function CatalogueSection() {
                 <div className="flex flex-wrap gap-space-xs pt-space-xs">
                   {c.chips.map((chip) => (
                     <span key={chip} className="flex items-center gap-1 rounded-md bg-surface-subtle px-space-sm py-1 text-label-md text-on-surface">
-                      <Icon name="check_circle" className="text-[16px] text-secondary-container" /> {chip}
+                      <Icon name="check_circle" className="text-[16px] text-secondary" /> {chip}
                     </span>
                   ))}
                 </div>
                 <div className="flex flex-col gap-space-sm pt-space-xs sm:flex-row sm:items-center sm:gap-space-md">
                   <Link
                     href="#quick-quote"
-                    className="rounded-lg bg-secondary-container px-space-md py-2.5 text-center text-label-lg text-on-secondary transition-colors hover:bg-trade-orange-hover"
+                    className="rounded-lg bg-cta px-space-md py-2.5 text-center text-label-lg text-on-secondary transition-colors hover:bg-cta-hover"
                   >
                     {c.cta}
                   </Link>
@@ -156,7 +156,7 @@ export default function CatalogueSection() {
 
             <div className="rounded-lg bg-surface-subtle p-space-md">
               <h4 className="mb-space-sm flex items-center gap-space-xs text-headline-sm text-on-surface">
-                <Icon name={c.featuredIcon} className="text-secondary-container" />
+                <Icon name={c.featuredIcon} className="text-secondary" />
                 {c.featuredTitle}
               </h4>
               <div
@@ -172,7 +172,7 @@ export default function CatalogueSection() {
                     </div>
                     <Link
                       href="#quick-quote"
-                      className="mt-space-md inline-flex items-center gap-1 pt-space-xs text-label-md text-secondary-container hover:underline"
+                      className="mt-space-md inline-flex items-center gap-1 py-2 text-label-md text-secondary hover:underline"
                     >
                       {it.note} <Icon name="arrow_forward" className="text-[14px]" />
                     </Link>

@@ -19,7 +19,7 @@ export default function TradeCta() {
       <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-secondary-container/15 blur-3xl" />
       <div className="relative z-10 grid grid-cols-1 items-center gap-space-xl lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <span className="mb-space-md inline-block rounded-full bg-secondary-container px-space-sm py-1 text-label-md text-on-secondary">
+          <span className="mb-space-md inline-block rounded-full bg-cta px-space-sm py-1 text-label-md text-on-secondary">
             Trade Enquiries
           </span>
           <h2 className="text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-primary">
@@ -102,7 +102,7 @@ export default function TradeCta() {
               </legend>
               <div className="flex flex-wrap gap-x-space-md gap-y-space-sm pt-1 text-body-sm">
                 {["Drinks", "Cooking oils", "Flour"].map((c) => (
-                  <label key={c} className="flex cursor-pointer items-center gap-1.5 py-1">
+                  <label key={c} className="flex cursor-pointer items-center gap-1.5 py-2.5">
                     <input type="checkbox" className="h-4 w-4 accent-secondary-container" />
                     <span>{c}</span>
                   </label>
@@ -112,7 +112,7 @@ export default function TradeCta() {
             <div className="pt-space-xs">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-space-xs rounded-lg bg-secondary-container px-space-md py-3 text-label-lg text-on-secondary shadow-md transition-colors hover:bg-trade-orange-hover"
+                className="flex w-full items-center justify-center gap-space-xs rounded-lg bg-cta px-space-md py-3 text-label-lg text-on-secondary shadow-md transition-colors hover:bg-cta-hover"
               >
                 <span>Send Enquiry</span>
                 <Icon name="send" className="text-[18px]" />

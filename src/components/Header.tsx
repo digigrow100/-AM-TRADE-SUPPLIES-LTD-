@@ -29,11 +29,11 @@ export default function Header() {
             B2B wholesale food &amp; drink supplier • {site.locality}
           </span>
           {phoneHref && site.phone ? (
-            <a href={phoneHref} className="shrink-0 hover:underline">
+            <a href={phoneHref} className="shrink-0 py-1 hover:underline">
               Tel: {site.phone}
             </a>
           ) : (
-            <Link href="/contact" className="shrink-0 hover:underline">
+            <Link href="/contact" className="shrink-0 py-1 hover:underline">
               Request a trade quote
             </Link>
           )}
@@ -49,6 +49,8 @@ export default function Header() {
           <Image
             src={images.logo}
             alt={`${site.name} logo`}
+            width={156}
+            height={48}
             priority
             className="h-10 w-auto object-contain md:h-12"
           />
@@ -77,13 +79,13 @@ export default function Header() {
         <div className="flex shrink-0 items-center gap-space-sm">
           <Link
             href="/contact"
-            className="hidden whitespace-nowrap rounded-lg bg-secondary-container px-space-md py-space-xs text-label-lg text-on-secondary shadow-[0_1px_4px_rgba(0,0,0,0.08)] transition-colors hover:bg-trade-orange-hover sm:inline-block"
+            className="hidden whitespace-nowrap rounded-lg bg-cta px-space-md py-space-xs text-label-lg text-on-secondary shadow-[0_1px_4px_rgba(0,0,0,0.08)] transition-colors hover:bg-cta-hover sm:inline-block"
           >
             Request a Quote
           </Link>
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-on-surface hover:bg-surface-container lg:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg text-on-surface hover:bg-surface-container lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -120,7 +122,7 @@ export default function Header() {
             })}
             <Link
               href="/contact"
-              className="mt-space-sm rounded-lg bg-secondary-container px-space-md py-3 text-center text-label-lg text-on-secondary hover:bg-trade-orange-hover"
+              className="mt-space-sm rounded-lg bg-cta px-space-md py-3 text-center text-label-lg text-on-secondary hover:bg-cta-hover"
             >
               Request a Quote
             </Link>
