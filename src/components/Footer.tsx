@@ -30,6 +30,11 @@ export default function Footer() {
               {site.locality}, supplying drinks, cooking oils and flour to trade
               customers.
             </p>
+            <address className="not-italic text-body-sm text-surface-container-highest">
+              {site.street}
+              <br />
+              {site.locality}, {site.postcode}
+            </address>
           </div>
 
           <div>

@@ -49,7 +49,9 @@ export const organizationLd = {
   description: site.description,
   address: {
     "@type": "PostalAddress",
+    streetAddress: site.street,
     addressLocality: site.locality,
+    postalCode: site.postcode,
     addressCountry: site.country,
   },
   ...(site.phone ? { telephone: site.phone } : {}),
