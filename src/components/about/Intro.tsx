@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Icon from "@/components/Icon";
 import { images } from "@/lib/images";
 
@@ -9,35 +10,33 @@ export default function Intro() {
         <div className="space-y-space-md lg:col-span-7">
           <div className="inline-flex items-center gap-space-xs rounded-full bg-surface-container px-space-sm py-space-xs text-label-md text-on-surface">
             <span className="h-2 w-2 rounded-full bg-secondary-container" />
-            ESTABLISHED BRITISH COMMODITY WHOLESALE
+            WHO WE ARE
           </div>
-          <h2 className="text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-surface">
-            Over 15 Years of Precision Supply Chain Excellence
+          <h2 className="text-headline-lg-mobile tracking-tight text-on-surface md:text-headline-lg">
+            A Local Wholesaler for Food and Drink Businesses
           </h2>
           <p className="text-body-md text-on-surface-variant">
-            Headquartered at Unit 3, Garfield Works, Uttoxeter Road, ST3 1PF, MB
-            Trade Supplies Ltd was forged with an unyielding mandate: eliminate
-            the inventory volatility and margin friction that penalize British
-            food services, hospitality groups, and independent retailers.
+            We supply the products trade customers reorder most: soft drinks,
+            bottled water, juices, cooking oils and flour.
           </p>
           <p className="text-body-md text-on-surface-variant">
-            What began as a regional FMCG distributor has matured into a
-            nationwide staple network. We warehouse high-volume beverage
-            allocations, foundational commercial flours, and certified cooking
-            oils, operating on zero-backorder principles and rock-solid vendor
-            contracts directly with primary manufacturers.
+            Our approach is simple. We keep the range focused, quote clearly and
+            deal with each business directly. See what we stock on our{" "}
+            <Link href="/services" className="font-semibold text-secondary underline-offset-2 hover:underline">
+              services page
+            </Link>
+            .
           </p>
           <div className="space-y-space-xs rounded-xl bg-surface-card p-space-lg shadow-sm">
             <div className="flex items-center gap-space-xs text-secondary-container">
               <Icon name="verified_user" className="text-[22px]" />
               <span className="text-label-lg uppercase tracking-wider text-on-surface">
-                Our Core Mission
+                What We Aim To Do
               </span>
             </div>
             <p className="text-body-md text-on-surface-variant">
-              Guaranteeing unbroken commercial supply chains, clear-cut volume
-              pricing tiers, and direct, proactive B2B account support so
-              kitchen operators and purchasing leads focus entirely on growth.
+              Make buying wholesale food and drink straightforward, so you spend
+              less time sourcing stock and more time running your business.
             </p>
           </div>
         </div>
@@ -46,7 +45,7 @@ export default function Intro() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container shadow-md">
             <Image
               src={images.aboutHub}
-              alt="Distribution centre with tidy pallet racking and a polished warehouse floor"
+              alt="Tidy warehouse aisle with pallet racking and a pallet truck"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
@@ -55,11 +54,11 @@ export default function Intro() {
           <div className="absolute -bottom-0 left-space-md max-w-xs rounded-xl bg-surface-card p-space-md shadow-lg lg:-bottom-space-md lg:-left-space-md">
             <div className="flex items-center gap-space-sm">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-stock-green-bg text-stock-green">
-                <Icon name="local_shipping" className="text-[24px]" />
+                <Icon name="location_on" className="text-[24px]" />
               </div>
               <div>
-                <p className="text-headline-sm text-on-surface">Fleet Dispatch</p>
-                <p className="text-body-sm text-on-surface-variant">Daily scheduled mainland routes</p>
+                <p className="text-headline-sm text-on-surface">Stoke-on-Trent</p>
+                <p className="text-body-sm text-on-surface-variant">Supplying trade customers</p>
               </div>
             </div>
           </div>

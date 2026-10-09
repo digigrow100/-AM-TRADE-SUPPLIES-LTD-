@@ -1,18 +1,31 @@
-// Remote placeholder images from the design export. Replace with files in
-// src/assets/images/ (imported statically) once the real photos are supplied.
+import logo from "@/assets/images/logo.webp";
+import aboutDrinks from "@/assets/images/about-drinks.webp";
+import aboutFlour from "@/assets/images/about-flour.webp";
+import aboutHub from "@/assets/images/about-hub.webp";
+import aboutOils from "@/assets/images/about-oils.webp";
+import contactDepot from "@/assets/images/contact-depot.webp";
+import homeDrinks from "@/assets/images/home-drinks.webp";
+import homeFlour from "@/assets/images/home-flour.webp";
+import homeHero from "@/assets/images/home-hero.webp";
+import homeLogistics from "@/assets/images/home-logistics.webp";
+import homeOils from "@/assets/images/home-oils.webp";
+import servicesDrinks from "@/assets/images/services-drinks.webp";
+import servicesFlour from "@/assets/images/services-flour.webp";
+import servicesOils from "@/assets/images/services-oils.webp";
+
 export const images = {
-  logo: "https://lh3.googleusercontent.com/aida/AEtjO1Xdib-t1aJzmyvZxQ7OH70CDRSrwnhdGHFF8QKGFQ-XKlG7r6YY02Zye5b6B-HHNXLOZkGET_e3sFbMjHVZPhjRwsOzp6k57q3QiqhvvhtQlvhDmwB46hwmz945Nu--F-M-G2Pj_ysW_oX2o9vc2xZvklL_w45y-C47RzLek9hfQquT290ddiDViuAlyYjxQMIBu1M-f5PRJMI5SaLE8zkr6TowUCvMTQCeOMFu_64k4n5E1AxmUnjWilw",
-  homeHero: "https://lh3.googleusercontent.com/aida-public/AB6AXuBxTaI-uTT3sRch94QvbXNa6Qa3YoPtudncNi74Se4lRg4dceZhAzsdNORfM3T4J_NyFvffo1yAd7xjmMVPdJiAbwEt_9VznjZukKvgOqllIgvPUD7VZ3hMDE3gYcTDV7V0hJJrDue6cmjZNCpYR0moLjHXillTY_ng6Wfkoi-nRsZXiZa-480MKH2MVMER7MWIDO9TsRH5tAGbZTzb7v5sJfygD_ti976-9hm6TjwC_RrrWRv6W9vz",
-  homeDrinks: "https://lh3.googleusercontent.com/aida-public/AB6AXuBX2SxklYLi2khZVZT3saMSmhbsiVdzR3uo6KK14QwmAsUN7QswijVrEJELyPgB2WXXA2kpk-caG8mMtz_a_tHBFPyUgCqsmVWoincugofGgxuYnXYJ1RXQUw5gyMoTQFEITHgOlo1AGl0IWK1kmYDXbRat7MPW9W4DfjgDvYTpHnyI9pKQB3bpozesZwPCg5GKIHMBV2sqXuGhlbjG5drBv2pLX6mqEFOFCgUZWicAps3aWHvB9gGi",
-  homeOils: "https://lh3.googleusercontent.com/aida-public/AB6AXuDWGr9_9mnOyNdI1nfxbh8gPXFwcwaTTzvmHhbKW7FIj0bSnae9DQTrt8-jGUMhft8SNLk_q7hzaQZnoUMIVaMx_z6tHJLpSp091EMsjbQz7Jy3iU7KtyP6NHHVHbbv8nNImzripvsZ3dBLzaCtXY91JCYArNjoPVJ37-Ab1V5fiqD5rviQRVBybGRNZu6i0tDZVNB4u8cKYSStJIPdVgPYlo6uviLQ6Ym8_dHnE3UOzt0IDdjJHknW",
-  homeFlour: "https://lh3.googleusercontent.com/aida-public/AB6AXuCb3pdiWNvZJ2e3K1m9YhKae7KNsIpriTIJF1BwamW5bVsP4J7knc7Z5-2YpVOtlOHhaGy8kiT5ACUWWjT79ISkMPIR5MZqGJjp5QuRH0cqqpBTBep6ldbR2-x8Z4QtulmQgAamTJom93xfl9qR6s4xdyLDjGsYGXpMH5IaZuZzVb69YJtxG2Ss6w5RxZ_8occ__MHnNL6nG7wJ--B_lvP34Q0pFOkBpTkSZ52slpZVitzYOQ55u8Xc",
-  homeLogistics: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3mItrQYe8yLzC8-JtLouShcyDtD6qEWD3Uv1QWG_q_4D4wHEwDiBsMSkB3NWLjsmx1e5LYVu2L_PD4nysklXyi4aWhUqA3f4dd1FqLwEkNcNTD1L6ihy_4HACiahn_hjFqCdXtK2tAsZ6jHnBaooEbtq869GJ6ptwhFtAe6jL_2TLZwSHi3jgjADxP2gC-irrdsK8zUV1EnYlvJr5Vd573VUWzTQf9AQ9okZdO6WgVgNaKYuJeqjy",
-  contactDepot: "https://lh3.googleusercontent.com/aida-public/AB6AXuA5eZ_UHxdHSPqUFiHdCnkCo69v7-pZ4tJDO4t3av-cT91D3pRi7ZOjeOi7TdeRTQPeD3eG9rUAM2V4vmcbvkoUfDuNF52z_oJGWYmtv28b0mVE0W56zz841hovNOUrSCy-qsaAKk7lK5OXveeBTH3-42Q3-eGWiKV3hs3f8cCztbhpVhXBvdjnU5IKw9uhi68nl3baXLbRFSl04ehK7wovSq78BHt8EB78P10hKoNk0fXh8eyOA8mT",
-  servicesDrinks: "https://lh3.googleusercontent.com/aida-public/AB6AXuAooKKjhC2Oz736PuKHNdVXayFlB-PJyL_fvpBvbNfI1WmG7huy6c-_lDwUvsijzkTMzeU1lvn8hdDUn362SHfbJkluzUl7QutpguwJgbDWfH1nr9eCnaQi9YJLtFt4bg8LuKnbHtwaWaWnIbXjda3z_fguE6qbMXRMMUVeK20rVnOoSCq9uLfgJOJjWzgaFCoCka7vbESV0rFTUOAzInZKTP-XVdCBGcqFV2IZ0HJ6qpXeWmh2HJyW",
-  servicesOils: "https://lh3.googleusercontent.com/aida-public/AB6AXuAsJ7DUTKx_MnvMvfVAfD0a8OXZRc7XXmLzpEJJus4W_jNZzJE9BXy8dT_hf965m3CFF0AnB3NIKUQVrmoHN1rFQxelm4Ql6PaPjTZ6tQvtlwgo6IoI3m3JLV2I2q-DDnoVBlLibXUfxQ5NfehPOtz1upnrh5x2ip7bzfXIzUHRrYkNl9FqdaEreaEV8mOWX5Ev0bvpc5XF8409jEQS1cQgFEdlf_pQPZXmY3b7ZmGVG1jG6IrRjkrs",
-  servicesFlour: "https://lh3.googleusercontent.com/aida-public/AB6AXuDh-nu0ZFaI_eXMtDcVK91UxLsaEQ3cdYM1Gcs_ayjZq9wz8cGVyuJoM8zv9C-1hR9Vl0Pt6H1UIOw-zAb27WTdKJo-a3RoCblV5JXsiE5pq3QVOejK__keLP1e8TwjJ99gCGV9h8qQs5JGY-b4Lnob7oh1UP63J-tjd2iqDpa_yDggAlrpVwrOYawiVXRR-fkeZDhxSlSCmKtc5ll9UnmDV0ATA0H9lpshwbHAh35HVE_brfOHOKlM",
-  aboutHub: "https://lh3.googleusercontent.com/aida-public/AB6AXuDGUqecVvtil-YVXIQsU-4BgyYeFUGm1oqGA5vOhaGq5jZRZu1Wokgz062azWteV56jmNx_ggZrSsNVxeXZxcpoE8DF04QD8N37mqigpGjOGLkYSrn5WSHF9YL0ffj6nYb5p8H4_QjI3jw61PXXLXLnBvogveDnoIgNwOVsyWq6dYSgjodNL0AZyYmy_lS1ohPIs5gmVABQIq6ym-O3jWTC7sNuPYgVBeZUiKwBypsfRk4TAqWR0mg5",
-  aboutDrinks: "https://lh3.googleusercontent.com/aida-public/AB6AXuAdOEyuzk1ptFF5QSG08RNPcGxovwqXGLsADDcqUULdF3H868stxodTV2aT8ABe459Mgyfn3iJDoMFxSYTuKavJf7bTp0np378JUrMH-aFvCw73ivG7n-wCRoxz_NpBM6t0w51AerNCXs9IT-C5cOb2bLwEhLgtZrngVlN2H9lDon1O8xsCmc2Tb8wuml4S3tWLAAQ8-YIsYPwVrp4RpQnZ8DpKUh2YMmKBtbsfYz6EYqu_kECCvcZ4",
-  aboutOils: "https://lh3.googleusercontent.com/aida-public/AB6AXuATYI4_m4ka7jP51WuFhQuA4D-HK6GzjTw1iHQbHvT6hWv0liGuhtGavvbnCxV8T3fF5b7YfdpWagd6Y_-tuI3FvUla7oVvbJQMEQvLzhgOHTJm9Qh-kVfuEhcU-HTso6SoZ_KgKFRco_dQyBlaSFci7LHVeemp3P1wuUicqNUTH2i-WkNKnonF44eO6Gnx5XnxzFXNYI3cNZtQdsNAixQpXlDQSh2PvXu_lEwwXnr-ksXkNdZSqnX5",
-  aboutFlour: "https://lh3.googleusercontent.com/aida-public/AB6AXuCM3gT0eF8VGUy3Io1w7bHruDzs4L_j1dzIM9VNBg7AIYGAKJpRKgcWLfjKsC78fOx4L260268zNwZ-sry6It2_FJ7qrdw1AAowRo1Hr15oxMcOZZG3kF0Fvg8l2qNbsTiZJqDIWoWVsbslQk3vcAGKBvDFNL44pLhL4tlTaSD-94jpPyme1C_lnTYoL2uXjQ9Gil_I1vqxXlozh4pMZ-i2X39q_EXKzCTAMGHhx4EX9RIaXYwsUBbF",
-} as const;
+  logo,
+  homeHero,
+  homeDrinks,
+  homeOils,
+  homeFlour,
+  homeLogistics,
+  contactDepot,
+  servicesDrinks,
+  servicesOils,
+  servicesFlour,
+  aboutHub,
+  aboutDrinks,
+  aboutOils,
+  aboutFlour,
+};

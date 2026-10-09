@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Icon from "@/components/Icon";
-import { site } from "@/lib/site";
+import { phoneHref, site } from "@/lib/site";
 
 const inputClass =
   "w-full rounded-lg bg-surface-subtle px-space-sm py-2.5 text-body-sm text-on-surface outline-none focus:ring-2 focus:ring-secondary-container";
@@ -18,40 +19,47 @@ export default function TradeCta() {
       <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-secondary-container/15 blur-3xl" />
       <div className="relative z-10 grid grid-cols-1 items-center gap-space-xl lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <span className="mb-space-md inline-block rounded-full bg-secondary-container px-space-sm py-1 text-label-md text-on-secondary">
-            Apply Within 2 Minutes
+          <span className="mb-space-md inline-block rounded-full bg-cta px-space-sm py-1 text-label-md text-on-secondary">
+            Trade Enquiries
           </span>
           <h2 className="text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-primary">
-            Open a Trade Account Today
+            Request a Wholesale Trade Quote
           </h2>
           <p className="mt-space-sm max-w-xl text-body-md text-surface-container-highest">
-            Gain immediate access to contract pricing, bulk pallet volume
-            discounts, flexible credit terms (subject to status), and regular
-            automated scheduled deliveries.
+            Send us details of your business and the products you need, and we
+            will use them to prepare your quote.
           </p>
-          <div className="mt-space-lg flex flex-wrap gap-x-space-xl gap-y-space-md">
-            <div>
-              <a href={site.phoneHref} className="text-headline-sm text-secondary-container hover:underline">
-                {site.phone}
-              </a>
-              <div className="text-body-sm text-surface-container-highest">Direct Commercial Desk</div>
+          <p className="mt-space-sm max-w-xl text-body-md text-surface-container-highest">
+            Want to see what is available first? Have a look at our{" "}
+            <Link href="/services" className="font-semibold text-on-primary underline-offset-2 hover:underline">
+              drinks, oils and flour
+            </Link>{" "}
+            or use the{" "}
+            <Link href="/contact" className="font-semibold text-on-primary underline-offset-2 hover:underline">
+              full enquiry form
+            </Link>
+            .
+          </p>
+          {(site.phone || site.email) && (
+            <div className="mt-space-lg flex flex-wrap gap-x-space-xl gap-y-space-md">
+              {phoneHref && site.phone && (
+                <a href={phoneHref} className="text-headline-sm text-secondary-container hover:underline">
+                  {site.phone}
+                </a>
+              )}
+              {site.email && (
+                <a href={`mailto:${site.email}`} className="break-all text-headline-sm text-on-primary hover:underline">
+                  {site.email}
+                </a>
+              )}
             </div>
-            <div className="min-w-0">
-              <a
-                href="mailto:orders@mbtradesupplies.co.uk"
-                className="break-all text-headline-sm text-on-primary hover:underline"
-              >
-                orders@mbtradesupplies.co.uk
-              </a>
-              <div className="text-body-sm text-surface-container-highest">Immediate Quotations</div>
-            </div>
-          </div>
+          )}
         </div>
 
         <div className="rounded-xl bg-surface-card p-space-lg text-on-surface shadow-lg lg:col-span-5">
-          <h3 className="mb-1 text-headline-sm text-on-surface">Request Wholesale Rate Card</h3>
+          <h3 className="mb-1 text-headline-sm text-on-surface">Quick Trade Enquiry</h3>
           <p className="mb-space-md text-body-sm text-on-surface-variant">
-            Tell us your product focus and monthly volume.
+            Tell us about your business and what you buy.
           </p>
           <form
             className="space-y-space-sm"
@@ -63,9 +71,9 @@ export default function TradeCta() {
           >
             <div>
               <label htmlFor="tc-company" className="mb-1 block text-label-md text-on-surface">
-                Company / Trading Name
+                Business Name
               </label>
-              <input id="tc-company" required type="text" placeholder="e.g. Apex Hospitality Group" className={inputClass} />
+              <input id="tc-company" required type="text" placeholder="Your business name" className={inputClass} />
             </div>
             <div className="grid grid-cols-1 gap-space-sm sm:grid-cols-2">
               <div>
@@ -73,11 +81,12 @@ export default function TradeCta() {
                   Business Type
                 </label>
                 <select id="tc-type" className={inputClass}>
+                  <option>Retailer</option>
                   <option>Restaurant / Takeaway</option>
-                  <option>Commercial Bakery</option>
-                  <option>Catering / Events</option>
-                  <option>Retailer / Off-Licence</option>
-                  <option>Wholesale Distributor</option>
+                  <option>Café</option>
+                  <option>Bakery</option>
+                  <option>Caterer</option>
+                  <option>Other business</option>
                 </select>
               </div>
               <div>
@@ -89,17 +98,13 @@ export default function TradeCta() {
             </div>
             <fieldset>
               <legend className="mb-1 block text-label-md text-on-surface">
-                Primary Commodities Required
+                Products You Need
               </legend>
               <div className="flex flex-wrap gap-x-space-md gap-y-space-sm pt-1 text-body-sm">
-                {[
-                  { label: "Drinks & Juices", checked: true },
-                  { label: "Cooking Oils", checked: true },
-                  { label: "Flour & Baking", checked: false },
-                ].map((c) => (
-                  <label key={c.label} className="flex cursor-pointer items-center gap-1.5 py-1">
-                    <input type="checkbox" defaultChecked={c.checked} className="h-4 w-4 accent-secondary-container" />
-                    <span>{c.label}</span>
+                {["Drinks", "Cooking oils", "Flour"].map((c) => (
+                  <label key={c} className="flex cursor-pointer items-center gap-1.5 py-2.5">
+                    <input type="checkbox" className="h-4 w-4 accent-secondary-container" />
+                    <span>{c}</span>
                   </label>
                 ))}
               </div>
@@ -107,9 +112,9 @@ export default function TradeCta() {
             <div className="pt-space-xs">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-space-xs rounded-lg bg-secondary-container px-space-md py-3 text-label-lg text-on-secondary shadow-md transition-colors hover:bg-trade-orange-hover"
+                className="flex w-full items-center justify-center gap-space-xs rounded-lg bg-cta px-space-md py-3 text-label-lg text-on-secondary shadow-md transition-colors hover:bg-cta-hover"
               >
-                <span>Submit Account Application</span>
+                <span>Send Enquiry</span>
                 <Icon name="send" className="text-[18px]" />
               </button>
             </div>
@@ -118,8 +123,7 @@ export default function TradeCta() {
                 role="status"
                 className="mt-space-xs rounded-lg bg-stock-green-bg p-space-sm text-center text-body-sm text-stock-green"
               >
-                Thank you! Your trade representative will contact you within 2
-                working hours.
+                Thank you for your enquiry. We will be in touch.
               </div>
             )}
           </form>

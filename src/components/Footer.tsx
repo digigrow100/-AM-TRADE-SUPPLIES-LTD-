@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { images } from "@/lib/images";
-import {
-  footerComplianceLinks,
-  footerQuickLinks,
-  site,
-} from "@/lib/site";
+import { productCategories } from "@/lib/products";
+import { footerPageLinks, phoneHref, site } from "@/lib/site";
 
-const linkClass = "transition-colors hover:text-on-primary";
+const linkClass = "block py-2 transition-colors hover:text-on-primary";
 
 export default function Footer() {
   return (
@@ -15,35 +12,30 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-margin-mobile sm:px-margin">
         <div className="grid grid-cols-1 gap-space-xl pb-space-xl md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-space-md">
-            <div className="flex items-center gap-space-sm">
+            <Link
+              href="/"
+              aria-label={`${site.name} home`}
+              className="inline-block rounded-lg bg-surface-card px-space-md py-space-sm"
+            >
               <Image
                 src={images.logo}
-                alt={`${site.name} Logo`}
-                width={120}
-                height={32}
-                className="h-8 w-auto object-contain brightness-0 invert"
+                alt={`${site.name} logo`}
+                width={130}
+                height={40}
+                className="h-10 w-auto object-contain"
               />
-              <span className="text-headline-sm tracking-tight text-on-primary">
-                {site.shortName}
-              </span>
-            </div>
+            </Link>
             <p className="text-body-sm text-surface-container-highest">
-              Industrial wholesale solutions &amp; high-volume commodity trade
-              distribution for hospitality, food prep, and commercial operations
-              across the United Kingdom.
+              {site.name} is a B2B wholesale food and drink supplier in{" "}
+              {site.locality}, supplying drinks, cooking oils and flour to trade
+              customers.
             </p>
-            <div className="space-y-space-xs text-body-sm text-surface-container-highest">
-              <p>{site.address}</p>
-              <p>
-                Company Reg: {site.companyReg} | VAT: {site.vat}
-              </p>
-            </div>
           </div>
 
           <div>
-            <h4 className="mb-space-md text-headline-sm text-on-primary">Quick Links</h4>
-            <ul className="space-y-space-sm text-body-sm text-surface-container-highest">
-              {footerQuickLinks.map((l) => (
+            <h2 className="mb-space-md text-headline-sm text-on-primary">Quick Links</h2>
+            <ul className="text-body-sm text-surface-container-highest">
+              {footerPageLinks.map((l) => (
                 <li key={l.label}>
                   <Link className={linkClass} href={l.href}>
                     {l.label}
@@ -54,14 +46,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-space-md text-headline-sm text-on-primary">
-              Trade Compliance
-            </h4>
-            <ul className="space-y-space-sm text-body-sm text-surface-container-highest">
-              {footerComplianceLinks.map((l) => (
-                <li key={l.label}>
-                  <Link className={linkClass} href={l.href}>
-                    {l.label}
+            <h2 className="mb-space-md text-headline-sm text-on-primary">Our Products</h2>
+            <ul className="text-body-sm text-surface-container-highest">
+              {productCategories.map((c) => (
+                <li key={c.id}>
+                  <Link className={linkClass} href={c.href}>
+                    {c.name}
                   </Link>
                 </li>
               ))}
@@ -69,26 +59,36 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-space-md text-headline-sm text-on-primary">
-              Trade Enquiries
-            </h4>
+            <h2 className="mb-space-md text-headline-sm text-on-primary">Trade Enquiries</h2>
             <p className="mb-space-sm text-body-sm text-surface-container-highest">
-              Need contract pricing, bulk pallet terms, or dedicated logistics routing?
+              Looking for a wholesale quote? Send us your product list and
+              delivery postcode.
             </p>
-            <a
-              href={site.phoneHref}
-              className="text-headline-sm text-secondary-container hover:underline"
+            <Link
+              href="/contact"
+              className="inline-block py-2 text-label-lg text-secondary-container hover:underline"
             >
-              {site.phone}
-            </a>
-            <p className="mt-space-xs text-body-sm text-surface-container-highest">
-              {site.hours}
-            </p>
+              Request a trade quote
+            </Link>
+            {phoneHref && site.phone && (
+              <p className="mt-space-sm text-body-sm text-surface-container-highest">
+                <a href={phoneHref} className="inline-block py-1 transition-colors hover:text-on-primary">
+                  {site.phone}
+                </a>
+              </p>
+            )}
+            {site.email && (
+              <p className="mt-space-xs break-all text-body-sm text-surface-container-highest">
+                <a href={`mailto:${site.email}`} className="inline-block py-1 transition-colors hover:text-on-primary">
+                  {site.email}
+                </a>
+              </p>
+            )}
           </div>
         </div>
 
         <div className="pt-space-lg text-center text-body-sm text-surface-container-highest">
-          © 2026 {site.name}. All rights reserved. Registered in England &amp; Wales.
+          © {new Date().getFullYear()} {site.name}. All rights reserved.
         </div>
       </div>
     </footer>

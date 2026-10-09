@@ -1,25 +1,25 @@
 import Icon from "@/components/Icon";
 
-const features = [
+const steps = [
   {
-    icon: "inventory_2",
-    title: "Guaranteed Inventory",
-    body: "Deep stock holding in Garfield Works prevents the constant out-of-stock shortages typical of retail cash-and-carries.",
+    icon: "support_agent",
+    title: "We Listen First",
+    body: "We start by asking what your business sells, what you need and how often you order.",
   },
   {
-    icon: "payments",
-    title: "Volume Tiered Pricing",
-    body: "Aggressive pallet breaks and 30-day approved commercial credit terms that protect cash flow and restaurant margins.",
+    icon: "receipt_long",
+    title: "We Quote Clearly",
+    body: "Your quote is based on the products and quantities you ask for, with no guesswork.",
   },
   {
-    icon: "schedule",
-    title: "Standing Re-Orders",
-    body: "Automated weekly replenishment profiles scheduled to your prep days, eliminating the hassle of frantic last-minute ordering.",
+    icon: "location_on",
+    title: "We Supply Locally",
+    body: "Working from Stoke-on-Trent, we discuss delivery to your area before you commit.",
   },
   {
-    icon: "badge",
-    title: "Single Point of Contact",
-    body: "Direct line access to your assigned account executive with instant answers on delivery ETA, invoices, and product certifications.",
+    icon: "mail",
+    title: "We Stay in Touch",
+    body: "You deal with us directly, so questions about your order go to the people who handle it.",
   },
 ];
 
@@ -27,17 +27,15 @@ export default function WhyChoose() {
   return (
     <section className="mb-space-xl rounded-2xl bg-surface-subtle p-space-md py-space-lg shadow-sm sm:p-space-lg md:mb-space-2xl md:p-space-xl">
       <div className="mx-auto mb-space-xl max-w-2xl space-y-space-xs text-center">
-        <h2 className="text-headline-lg-mobile md:text-headline-lg tracking-tight text-on-surface">
-          Why Trade Buyers Choose MB
+        <h2 className="text-headline-lg-mobile tracking-tight text-on-surface md:text-headline-lg">
+          How We Work With Trade Customers
         </h2>
         <p className="text-body-md text-on-surface-variant">
-          We do not operate consumer storefronts or speculative brokers. Our
-          infrastructure is tuned specifically for corporate purchasing
-          efficiency.
+          Our service is built around clear communication and a focused range.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-space-md md:grid-cols-2 lg:grid-cols-4">
-        {features.map((f) => (
+        {steps.map((f) => (
           <div
             key={f.title}
             className="space-y-space-sm rounded-xl bg-surface-card p-space-lg shadow-sm transition-shadow hover:shadow-md"
