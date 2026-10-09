@@ -12,6 +12,8 @@ export const site = {
   name: "AM Trade Supplies Ltd",
   shortName: "AM Trade Supplies",
   locality: "Stoke-on-Trent",
+  street: "Unit 60, Bucknall Old Road",
+  postcode: "ST1 2AG",
   country: "GB",
   description:
     "AM Trade Supplies Ltd is a B2B wholesale food and drink supplier in Stoke-on-Trent, supplying soft drinks, bottled water, juices, cooking oils and flour to trade customers.",
@@ -20,6 +22,9 @@ export const site = {
   phone: undefined as string | undefined,
   email: undefined as string | undefined,
 };
+
+export const addressLine = `${site.street}, ${site.locality}, ${site.postcode}`;
+export const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressLine + ", UK")}`;
 
 export const phoneHref = site.phone
   ? `tel:${site.phone.replace(/\s+/g, "")}`

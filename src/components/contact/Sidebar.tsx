@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 import { images } from "@/lib/images";
-import { phoneHref, site } from "@/lib/site";
+import { mapsHref, phoneHref, site } from "@/lib/site";
 
 const include = [
   "Your business name and type of business",
@@ -29,7 +29,19 @@ export default function Sidebar() {
             <Icon name="location_on" className="mt-0.5 text-[22px] text-secondary" />
             <div>
               <p className="text-label-lg text-on-surface">AM Trade Supplies Ltd</p>
-              <p className="text-on-surface-variant">Stoke-on-Trent, UK</p>
+              <address className="not-italic text-on-surface-variant">
+                {site.street}
+                <br />
+                {site.locality}, {site.postcode}
+              </address>
+              <a
+                href={mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-flex items-center gap-1 py-2 text-label-lg text-secondary hover:underline"
+              >
+                View on Google Maps <Icon name="launch" className="text-[16px]" />
+              </a>
             </div>
           </div>
           {phoneHref && site.phone && (

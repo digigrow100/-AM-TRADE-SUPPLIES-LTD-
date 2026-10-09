@@ -30,7 +30,7 @@ const faqs: FaqItem[] = [
   {
     icon: "location_on",
     q: "Where are you based?",
-    a: "We are based in Stoke-on-Trent, UK. Delivery availability depends on your location, so please include your postcode when you get in touch.",
+    a: "We are based at Unit 60, Bucknall Old Road, Stoke-on-Trent, ST1 2AG. Delivery availability depends on your location, so please include your postcode when you get in touch.",
   },
   {
     icon: "receipt_long",

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import { phoneHref, site } from "@/lib/site";
+import { addressLine, phoneHref, site } from "@/lib/site";
 
 export default function AccountCta() {
   const contacts = [
-    { icon: "pin_drop", label: "Based In", value: "Stoke-on-Trent, UK" },
+    { icon: "pin_drop", label: "Based In", value: addressLine },
     { icon: "inventory_2", label: "Our Range", value: "Drinks, cooking oils and flour" },
     { icon: "send", label: "Enquiries", value: "Send a trade enquiry online" },
   ];

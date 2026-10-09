@@ -4,7 +4,7 @@ Next.js (App Router, TypeScript, Tailwind CSS v4) site. Read the relevant guide 
 
 ## Business details
 
-The business is **AM Trade Supplies Ltd** (B2B wholesale food and drink supplier, Stoke-on-Trent). Never use any other business name. Do not add prices, minimum orders, delivery guarantees, certifications, reviews or contact details that the owner has not confirmed. Phone and email live in `src/lib/site.ts` (currently unset, so they are hidden).
+The business is **AM Trade Supplies Ltd** (B2B wholesale food and drink supplier, Stoke-on-Trent). Never use any other business name. Do not add prices, minimum orders, delivery guarantees, certifications, reviews or contact details that the owner has not confirmed. Address: Unit 60, Bucknall Old Road, Stoke-on-Trent, ST1 2AG. Phone and email live in `src/lib/site.ts` (currently unset, so they are hidden).
 
 ## Where to make changes
 

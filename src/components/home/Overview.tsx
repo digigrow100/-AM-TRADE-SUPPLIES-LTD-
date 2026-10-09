@@ -11,7 +11,7 @@ export default function Overview() {
     <section className="bg-surface py-space-xl md:py-space-2xl" id="partner-overview">
       <div className="mx-auto mb-space-xl max-w-3xl text-center">
         <h2 className="text-headline-lg-mobile text-on-surface md:text-headline-lg">
-          Everyday Food and Drink Staples, Supplied to Trade
+          Everyday Food and Drink Supplies for Trade Customers
         </h2>
         <p className="mt-space-md text-body-md leading-relaxed text-on-surface-variant">
           Whether you run a shop, a kitchen or a bakery, dependable stock of the
